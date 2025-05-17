@@ -13,15 +13,15 @@ fi
 
 # Run the container
 docker run -it \
-    --name=ur5_planner_dev \
+    --name=ur5_planners_ros2 \
     --shm-size=1g \
     --ulimit memlock=-1 \
     --device=/dev/bus/usb \
     --group-add plugdev \
     --volume="/tmp/.X11-unix:/tmp/.X11-unix" \
-    --volume="/home/$user/miapr/Projekt:/root/ws:rw" \
+    --volume="/home/$user/miapr/Projekt/MIAPR_DOCKER/ros2:/root/Shared/moveit_ws:rw" \
     --env="DISPLAY=$DISPLAY" \
     --network=host \
     --privileged \
-    ur5_planners \
+    jazzy \
     bash
