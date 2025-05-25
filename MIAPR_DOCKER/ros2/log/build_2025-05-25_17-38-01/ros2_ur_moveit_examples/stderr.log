@@ -1,0 +1,71 @@
+[31mCMake Error at CMakeLists.txt:58 (add_executable):
+  Cannot find source file:
+
+    src/hello_moveit.cpp
+
+  Tried extensions .c .C .c++ .cc .cpp .cxx .cu .mpp .m .M .mm .ixx .cppm
+  .ccm .cxxm .c++m .h .hh .h++ .hm .hpp .hxx .in .txx .f .F .for .f77 .f90
+  .f95 .f03 .hip .ispc
+
+[0m
+[31mCMake Error at CMakeLists.txt:62 (add_executable):
+  Cannot find source file:
+
+    src/kinematics.cpp
+
+  Tried extensions .c .C .c++ .cc .cpp .cxx .cu .mpp .m .M .mm .ixx .cppm
+  .ccm .cxxm .c++m .h .hh .h++ .hm .hpp .hxx .in .txx .f .F .for .f77 .f90
+  .f95 .f03 .hip .ispc
+
+[0m
+[31mCMake Error at CMakeLists.txt:66 (add_executable):
+  Cannot find source file:
+
+    src/check_collisions.cpp
+
+  Tried extensions .c .C .c++ .cc .cpp .cxx .cu .mpp .m .M .mm .ixx .cppm
+  .ccm .cxxm .c++m .h .hh .h++ .hm .hpp .hxx .in .txx .f .F .for .f77 .f90
+  .f95 .f03 .hip .ispc
+
+[0m
+[31mCMake Error at CMakeLists.txt:70 (add_executable):
+  Cannot find source file:
+
+    src/planning_scene.cpp
+
+  Tried extensions .c .C .c++ .cc .cpp .cxx .cu .mpp .m .M .mm .ixx .cppm
+  .ccm .cxxm .c++m .h .hh .h++ .hm .hpp .hxx .in .txx .f .F .for .f77 .f90
+  .f95 .f03 .hip .ispc
+
+[0m
+[31mCMake Error at CMakeLists.txt:74 (add_executable):
+  Cannot find source file:
+
+    src/planning_scene_service.cpp
+
+  Tried extensions .c .C .c++ .cc .cpp .cxx .cu .mpp .m .M .mm .ixx .cppm
+  .ccm .cxxm .c++m .h .hh .h++ .hm .hpp .hxx .in .txx .f .F .for .f77 .f90
+  .f95 .f03 .hip .ispc
+
+[0m
+[31mCMake Error at CMakeLists.txt:58 (add_executable):
+  No SOURCES given to target: hello_moveit
+
+[0m
+[31mCMake Error at CMakeLists.txt:62 (add_executable):
+  No SOURCES given to target: kinematics
+
+[0m
+[31mCMake Error at CMakeLists.txt:66 (add_executable):
+  No SOURCES given to target: check_collisions
+
+[0m
+[31mCMake Error at CMakeLists.txt:70 (add_executable):
+  No SOURCES given to target: planning_scene
+
+[0m
+[31mCMake Error at CMakeLists.txt:74 (add_executable):
+  No SOURCES given to target: planning_scene_service
+
+[0m
+[0mCMake Generate step failed.  Build files cannot be regenerated correctly.[0m

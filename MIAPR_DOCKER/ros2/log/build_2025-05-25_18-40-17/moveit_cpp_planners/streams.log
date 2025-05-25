@@ -1,0 +1,47 @@
+[0.014s] Invoking command in '/root/Shared/moveit_ws/build/moveit_cpp_planners': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/root/Shared/moveit_ws/install/ur_py_control:/opt/ros/jazzy /usr/bin/cmake --build /root/Shared/moveit_ws/build/moveit_cpp_planners -- -j16 -l16
+[0.083s] [ 28%] Built target kinematics
+[0.084s] [ 28%] Built target check_collisions
+[0.086s] [ 85%] Built target planning_scene_ompl
+[0.086s] [ 85%] Built target hello_moveit
+[0.086s] [ 85%] Built target planning_scene_stomp
+[0.086s] [ 85%] Built target planning_scene_chomp
+[0.088s] [100%] Built target planning_scene_service
+[0.180s] Invoked command in '/root/Shared/moveit_ws/build/moveit_cpp_planners' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/root/Shared/moveit_ws/install/ur_py_control:/opt/ros/jazzy /usr/bin/cmake --build /root/Shared/moveit_ws/build/moveit_cpp_planners -- -j16 -l16
+[0.191s] Invoking command in '/root/Shared/moveit_ws/build/moveit_cpp_planners': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/root/Shared/moveit_ws/install/ur_py_control:/opt/ros/jazzy /usr/bin/cmake --install /root/Shared/moveit_ws/build/moveit_cpp_planners
+[0.198s] -- Install configuration: ""
+[0.198s] -- Up-to-date: /root/Shared/moveit_ws/install/moveit_cpp_planners/lib/moveit_cpp_planners/hello_moveit
+[0.198s] -- Up-to-date: /root/Shared/moveit_ws/install/moveit_cpp_planners/lib/moveit_cpp_planners/kinematics
+[0.199s] -- Up-to-date: /root/Shared/moveit_ws/install/moveit_cpp_planners/lib/moveit_cpp_planners/check_collisions
+[0.199s] -- Up-to-date: /root/Shared/moveit_ws/install/moveit_cpp_planners/lib/moveit_cpp_planners/planning_scene_ompl
+[0.199s] -- Up-to-date: /root/Shared/moveit_ws/install/moveit_cpp_planners/lib/moveit_cpp_planners/planning_scene_stomp
+[0.199s] -- Up-to-date: /root/Shared/moveit_ws/install/moveit_cpp_planners/lib/moveit_cpp_planners/planning_scene_chomp
+[0.200s] -- Up-to-date: /root/Shared/moveit_ws/install/moveit_cpp_planners/lib/moveit_cpp_planners/planning_scene_service
+[0.200s] -- Up-to-date: /root/Shared/moveit_ws/install/moveit_cpp_planners/share/moveit_cpp_planners/launch
+[0.200s] -- Up-to-date: /root/Shared/moveit_ws/install/moveit_cpp_planners/share/moveit_cpp_planners/launch/check_collisions.launch.py
+[0.200s] -- Installing: /root/Shared/moveit_ws/install/moveit_cpp_planners/share/moveit_cpp_planners/launch/planning_scene_chomp.launch.py
+[0.200s] -- Installing: /root/Shared/moveit_ws/install/moveit_cpp_planners/share/moveit_cpp_planners/launch/planning_scene_stomp.launch.py
+[0.201s] -- Up-to-date: /root/Shared/moveit_ws/install/moveit_cpp_planners/share/moveit_cpp_planners/launch/kinematics.launch.py
+[0.201s] -- Up-to-date: /root/Shared/moveit_ws/install/moveit_cpp_planners/share/moveit_cpp_planners/launch/hello_moveit.launch.py
+[0.201s] -- Up-to-date: /root/Shared/moveit_ws/install/moveit_cpp_planners/share/moveit_cpp_planners/launch/planning_scene_ompl.launch.py
+[0.201s] -- Up-to-date: /root/Shared/moveit_ws/install/moveit_cpp_planners/share/moveit_cpp_planners/launch/planning_scene_service.launch.py
+[0.201s] -- Up-to-date: /root/Shared/moveit_ws/install/moveit_cpp_planners/share/moveit_cpp_planners/config
+[0.201s] -- Up-to-date: /root/Shared/moveit_ws/install/moveit_cpp_planners/share/moveit_cpp_planners/config/ompl_planning.yaml
+[0.201s] -- Up-to-date: /root/Shared/moveit_ws/install/moveit_cpp_planners/share/moveit_cpp_planners/config/stomp_planning.yaml
+[0.201s] -- Up-to-date: /root/Shared/moveit_ws/install/moveit_cpp_planners/share/moveit_cpp_planners/config/chomp_planning.yaml
+[0.201s] -- Up-to-date: /root/Shared/moveit_ws/install/moveit_cpp_planners/share/moveit_cpp_planners/config/kinematics.yaml
+[0.201s] -- Up-to-date: /root/Shared/moveit_ws/install/moveit_cpp_planners/share/ament_index/resource_index/package_run_dependencies/moveit_cpp_planners
+[0.202s] -- Up-to-date: /root/Shared/moveit_ws/install/moveit_cpp_planners/share/ament_index/resource_index/parent_prefix_path/moveit_cpp_planners
+[0.202s] -- Up-to-date: /root/Shared/moveit_ws/install/moveit_cpp_planners/share/moveit_cpp_planners/environment/ament_prefix_path.sh
+[0.202s] -- Up-to-date: /root/Shared/moveit_ws/install/moveit_cpp_planners/share/moveit_cpp_planners/environment/ament_prefix_path.dsv
+[0.202s] -- Up-to-date: /root/Shared/moveit_ws/install/moveit_cpp_planners/share/moveit_cpp_planners/environment/path.sh
+[0.202s] -- Up-to-date: /root/Shared/moveit_ws/install/moveit_cpp_planners/share/moveit_cpp_planners/environment/path.dsv
+[0.202s] -- Up-to-date: /root/Shared/moveit_ws/install/moveit_cpp_planners/share/moveit_cpp_planners/local_setup.bash
+[0.202s] -- Up-to-date: /root/Shared/moveit_ws/install/moveit_cpp_planners/share/moveit_cpp_planners/local_setup.sh
+[0.202s] -- Up-to-date: /root/Shared/moveit_ws/install/moveit_cpp_planners/share/moveit_cpp_planners/local_setup.zsh
+[0.202s] -- Up-to-date: /root/Shared/moveit_ws/install/moveit_cpp_planners/share/moveit_cpp_planners/local_setup.dsv
+[0.202s] -- Installing: /root/Shared/moveit_ws/install/moveit_cpp_planners/share/moveit_cpp_planners/package.dsv
+[0.202s] -- Up-to-date: /root/Shared/moveit_ws/install/moveit_cpp_planners/share/ament_index/resource_index/packages/moveit_cpp_planners
+[0.202s] -- Up-to-date: /root/Shared/moveit_ws/install/moveit_cpp_planners/share/moveit_cpp_planners/cmake/moveit_cpp_plannersConfig.cmake
+[0.202s] -- Up-to-date: /root/Shared/moveit_ws/install/moveit_cpp_planners/share/moveit_cpp_planners/cmake/moveit_cpp_plannersConfig-version.cmake
+[0.202s] -- Up-to-date: /root/Shared/moveit_ws/install/moveit_cpp_planners/share/moveit_cpp_planners/package.xml
+[0.203s] Invoked command in '/root/Shared/moveit_ws/build/moveit_cpp_planners' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/root/Shared/moveit_ws/install/ur_py_control:/opt/ros/jazzy /usr/bin/cmake --install /root/Shared/moveit_ws/build/moveit_cpp_planners
