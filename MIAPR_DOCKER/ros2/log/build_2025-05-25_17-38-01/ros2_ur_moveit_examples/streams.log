@@ -1,0 +1,159 @@
+[0.010s] Invoking command in '/root/Shared/moveit_ws/build/ros2_ur_moveit_examples': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /root/Shared/moveit_ws -DCMAKE_INSTALL_PREFIX=/root/Shared/moveit_ws/install/ros2_ur_moveit_examples
+[0.062s] -- The C compiler identification is GNU 13.3.0
+[0.111s] -- The CXX compiler identification is GNU 13.3.0
+[0.128s] -- Detecting C compiler ABI info
+[0.213s] -- Detecting C compiler ABI info - done
+[0.219s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.220s] -- Detecting C compile features
+[0.220s] -- Detecting C compile features - done
+[0.230s] -- Detecting CXX compiler ABI info
+[0.326s] -- Detecting CXX compiler ABI info - done
+[0.333s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.333s] -- Detecting CXX compile features
+[0.333s] -- Detecting CXX compile features - done
+[0.474s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: system filesystem date_time thread 
+[0.481s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.621s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.752s] -- Found control_msgs: 5.4.0 (/opt/ros/jazzy/share/control_msgs/cmake)
+[0.817s] -- Found rosidl_generator_c: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.838s] -- Found rosidl_generator_cpp: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.862s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.887s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.079s] -- Found moveit_common: 2.12.3 (/opt/ros/jazzy/share/moveit_common/cmake)
+[1.084s] -- Found moveit_core: 2.12.3 (/opt/ros/jazzy/share/moveit_core/cmake)
+[1.116s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: chrono date_time filesystem iostreams program_options regex serialization system thread 
+[1.196s] -- Found parameter_traits: 0.4.0 (/opt/ros/jazzy/share/parameter_traits/cmake)
+[1.263s] -- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[1.268s] -- Found rmw_fastrtps_cpp: 8.4.2 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[1.368s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[1.381s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[1.401s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.506s] -- Found rclcpp_lifecycle: 28.1.9 (/opt/ros/jazzy/share/rclcpp_lifecycle/cmake)
+[1.548s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: filesystem 
+[1.649s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[1.649s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[1.971s] -- Found moveit_ros_planning: 2.12.3 (/opt/ros/jazzy/share/moveit_ros_planning/cmake)
+[1.975s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: system filesystem date_time program_options thread chrono 
+[2.021s] -- Found moveit_ros_planning_interface: 2.12.3 (/opt/ros/jazzy/share/moveit_ros_planning_interface/cmake)
+[2.025s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: date_time filesystem program_options system thread 
+[2.044s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: thread system filesystem regex date_time program_options 
+[2.073s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: system filesystem date_time program_options thread 
+[2.114s] -- Found moveit_servo: 2.12.3 (/opt/ros/jazzy/share/moveit_servo/cmake)
+[2.151s] -- Found interactive_markers: 2.5.4 (/opt/ros/jazzy/share/interactive_markers/cmake)
+[2.160s] -- Found rviz_visual_tools: 4.1.4 (/opt/ros/jazzy/share/rviz_visual_tools/cmake)
+[2.195s] -- Setting OGRE_DIR to: '/opt/ros/jazzy/share/rviz_ogre_vendor/cmake/../../../opt/rviz_ogre_vendor/lib/OGRE/cmake'
+[2.196s] -- Found OGRE
+[2.196s] --   static     : OFF
+[2.196s] --   components : MeshLodGenerator;Overlay;Paging;Property;RTShaderSystem;Terrain;Volume
+[2.196s] --   plugins    : Plugin_BSPSceneManager;Plugin_OctreeSceneManager;Plugin_PCZSceneManager;Plugin_ParticleFX;RenderSystem_GL;RenderSystem_GL3Plus;Codec_STBI
+[2.196s] --   media      : /opt/ros/jazzy/opt/rviz_ogre_vendor/share/OGRE/Media
+[2.196s] -- OGRE_LIBRARIES: OgreMeshLodGenerator;OgreOverlay;OgrePaging;OgreProperty;OgreRTShaderSystem;OgreTerrain;OgreVolume;OgreMain
+[2.196s] -- OGRE_LIBRARY_DIRS: /opt/ros/jazzy/opt/rviz_ogre_vendor/lib
+[2.196s] -- OGRE_PLUGINS: Plugin_BSPSceneManager;Plugin_OctreeSceneManager;Plugin_PCZSceneManager;Plugin_ParticleFX;RenderSystem_GL;RenderSystem_GL3Plus;Codec_STBI
+[2.196s] -- OGRE_PLUGIN_DIR: /opt/ros/jazzy/opt/rviz_ogre_vendor/lib/OGRE
+[2.197s] -- rviz_ogre_vendor::OgreOverlay for IMPORTED_LOCATION_RELEASE: /opt/ros/jazzy/opt/rviz_ogre_vendor/lib/libOgreOverlay.so
+[2.197s] -- rviz_ogre_vendor::OgreOverlay for IMPORTED_LOCATION_DEBUG: /opt/ros/jazzy/opt/rviz_ogre_vendor/lib/libOgreOverlay.so
+[2.197s] -- rviz_ogre_vendor::OgreMain for IMPORTED_LOCATION_RELEASE: /opt/ros/jazzy/opt/rviz_ogre_vendor/lib/libOgreMain.so
+[2.197s] -- rviz_ogre_vendor::OgreMain for IMPORTED_LOCATION_DEBUG: /opt/ros/jazzy/opt/rviz_ogre_vendor/lib/libOgreMain.so
+[2.197s] -- Could not find freeimage library
+[2.215s] -- Found ZLIB: /usr/lib/x86_64-linux-gnu/libz.so (found version "1.3")  
+[2.220s] -- Found OpenGL: /usr/lib/x86_64-linux-gnu/libOpenGL.so   
+[2.340s] -- Found X11: /usr/include   
+[2.340s] -- Looking for XOpenDisplay in /usr/lib/x86_64-linux-gnu/libX11.so;/usr/lib/x86_64-linux-gnu/libXext.so
+[2.422s] -- Looking for XOpenDisplay in /usr/lib/x86_64-linux-gnu/libX11.so;/usr/lib/x86_64-linux-gnu/libXext.so - found
+[2.424s] -- Looking for gethostbyname
+[2.507s] -- Looking for gethostbyname - found
+[2.507s] -- Looking for connect
+[2.589s] -- Looking for connect - found
+[2.589s] -- Looking for remove
+[2.671s] -- Looking for remove - found
+[2.671s] -- Looking for shmat
+[2.748s] -- Looking for shmat - found
+[2.749s] -- Looking for IceConnectionNumber in ICE
+[2.834s] -- Looking for IceConnectionNumber in ICE - found
+[2.854s] -- Setting yaml-cpp_DIR to: '/opt/ros/jazzy/share/yaml_cpp_vendor/cmake/../../../opt/yaml_cpp_vendor/share/cmake/yaml-cpp'
+[2.980s] -- Found moveit_visual_tools: 4.1.2 (/opt/ros/jazzy/share/moveit_visual_tools/cmake)
+[3.038s] -- Found ament_lint_auto: 0.17.2 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[3.165s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[3.167s] -- Configured cppcheck include dirs: /root/Shared/moveit_ws/include
+[3.167s] -- Configured cppcheck exclude dirs and/or files: 
+[3.170s] -- Added test 'flake8' to check Python code syntax and style conventions
+[3.170s] -- Configured 'flake8' exclude dirs and/or files: 
+[3.176s] -- Added test 'lint_cmake' to check CMake code style
+[3.180s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[3.203s] -- Added test 'uncrustify' to check C / C++ code style
+[3.203s] -- Configured uncrustify additional arguments: 
+[3.206s] -- Added test 'xmllint' to check XML markup files
+[3.208s] -- Configuring done (3.2s)
+[3.217s] [31mCMake Error at CMakeLists.txt:58 (add_executable):
+[3.217s]   Cannot find source file:
+[3.217s] 
+[3.217s]     src/hello_moveit.cpp
+[3.217s] 
+[3.217s]   Tried extensions .c .C .c++ .cc .cpp .cxx .cu .mpp .m .M .mm .ixx .cppm
+[3.217s]   .ccm .cxxm .c++m .h .hh .h++ .hm .hpp .hxx .in .txx .f .F .for .f77 .f90
+[3.217s]   .f95 .f03 .hip .ispc
+[3.217s] 
+[3.218s] [0m
+[3.221s] [31mCMake Error at CMakeLists.txt:62 (add_executable):
+[3.221s]   Cannot find source file:
+[3.221s] 
+[3.222s]     src/kinematics.cpp
+[3.222s] 
+[3.222s]   Tried extensions .c .C .c++ .cc .cpp .cxx .cu .mpp .m .M .mm .ixx .cppm
+[3.222s]   .ccm .cxxm .c++m .h .hh .h++ .hm .hpp .hxx .in .txx .f .F .for .f77 .f90
+[3.222s]   .f95 .f03 .hip .ispc
+[3.222s] 
+[3.222s] [0m
+[3.222s] [31mCMake Error at CMakeLists.txt:66 (add_executable):
+[3.222s]   Cannot find source file:
+[3.223s] 
+[3.223s]     src/check_collisions.cpp
+[3.223s] 
+[3.223s]   Tried extensions .c .C .c++ .cc .cpp .cxx .cu .mpp .m .M .mm .ixx .cppm
+[3.223s]   .ccm .cxxm .c++m .h .hh .h++ .hm .hpp .hxx .in .txx .f .F .for .f77 .f90
+[3.223s]   .f95 .f03 .hip .ispc
+[3.223s] 
+[3.223s] [0m
+[3.223s] [31mCMake Error at CMakeLists.txt:70 (add_executable):
+[3.223s]   Cannot find source file:
+[3.223s] 
+[3.223s]     src/planning_scene.cpp
+[3.223s] 
+[3.223s]   Tried extensions .c .C .c++ .cc .cpp .cxx .cu .mpp .m .M .mm .ixx .cppm
+[3.223s]   .ccm .cxxm .c++m .h .hh .h++ .hm .hpp .hxx .in .txx .f .F .for .f77 .f90
+[3.223s]   .f95 .f03 .hip .ispc
+[3.223s] 
+[3.223s] [0m
+[3.223s] [31mCMake Error at CMakeLists.txt:74 (add_executable):
+[3.223s]   Cannot find source file:
+[3.223s] 
+[3.223s]     src/planning_scene_service.cpp
+[3.223s] 
+[3.223s]   Tried extensions .c .C .c++ .cc .cpp .cxx .cu .mpp .m .M .mm .ixx .cppm
+[3.224s]   .ccm .cxxm .c++m .h .hh .h++ .hm .hpp .hxx .in .txx .f .F .for .f77 .f90
+[3.224s]   .f95 .f03 .hip .ispc
+[3.224s] 
+[3.224s] [0m
+[3.229s] [31mCMake Error at CMakeLists.txt:58 (add_executable):
+[3.229s]   No SOURCES given to target: hello_moveit
+[3.229s] 
+[3.229s] [0m
+[3.229s] [31mCMake Error at CMakeLists.txt:62 (add_executable):
+[3.229s]   No SOURCES given to target: kinematics
+[3.229s] 
+[3.229s] [0m
+[3.230s] [31mCMake Error at CMakeLists.txt:66 (add_executable):
+[3.230s]   No SOURCES given to target: check_collisions
+[3.230s] 
+[3.230s] [0m
+[3.230s] [31mCMake Error at CMakeLists.txt:70 (add_executable):
+[3.230s]   No SOURCES given to target: planning_scene
+[3.230s] 
+[3.230s] [0m
+[3.230s] [31mCMake Error at CMakeLists.txt:74 (add_executable):
+[3.230s]   No SOURCES given to target: planning_scene_service
+[3.231s] 
+[3.231s] [0m
+[3.231s] [0mCMake Generate step failed.  Build files cannot be regenerated correctly.[0m
+[3.243s] Invoked command in '/root/Shared/moveit_ws/build/ros2_ur_moveit_examples' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /root/Shared/moveit_ws -DCMAKE_INSTALL_PREFIX=/root/Shared/moveit_ws/install/ros2_ur_moveit_examples

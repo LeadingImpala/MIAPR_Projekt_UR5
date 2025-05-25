@@ -1,0 +1,54 @@
+[ 28%] Built target check_collisions
+[ 28%] Built target kinematics
+[ 42%] [32mBuilding CXX object CMakeFiles/planning_scene_stomp.dir/src/planning_scene_stomp.cpp.o[0m
+[ 50%] Built target planning_scene_ompl
+[ 78%] Built target hello_moveit
+[ 78%] Built target planning_scene_service
+[ 85%] [32mBuilding CXX object CMakeFiles/planning_scene_chomp.dir/src/planning_scene_chomp.cpp.o[0m
+[ 92%] [32m[1mLinking CXX executable planning_scene_stomp[0m
+[100%] [32m[1mLinking CXX executable planning_scene_chomp[0m
+[100%] Built target planning_scene_stomp
+[100%] Built target planning_scene_chomp
+-- Install configuration: ""
+-- Installing: /root/Shared/moveit_ws/install/moveit_cpp_planners/lib/moveit_cpp_planners/hello_moveit
+-- Set non-toolchain portion of runtime path of "/root/Shared/moveit_ws/install/moveit_cpp_planners/lib/moveit_cpp_planners/hello_moveit" to ""
+-- Installing: /root/Shared/moveit_ws/install/moveit_cpp_planners/lib/moveit_cpp_planners/kinematics
+-- Set non-toolchain portion of runtime path of "/root/Shared/moveit_ws/install/moveit_cpp_planners/lib/moveit_cpp_planners/kinematics" to ""
+-- Installing: /root/Shared/moveit_ws/install/moveit_cpp_planners/lib/moveit_cpp_planners/check_collisions
+-- Set non-toolchain portion of runtime path of "/root/Shared/moveit_ws/install/moveit_cpp_planners/lib/moveit_cpp_planners/check_collisions" to ""
+-- Installing: /root/Shared/moveit_ws/install/moveit_cpp_planners/lib/moveit_cpp_planners/planning_scene_ompl
+-- Set non-toolchain portion of runtime path of "/root/Shared/moveit_ws/install/moveit_cpp_planners/lib/moveit_cpp_planners/planning_scene_ompl" to ""
+-- Installing: /root/Shared/moveit_ws/install/moveit_cpp_planners/lib/moveit_cpp_planners/planning_scene_stomp
+-- Set non-toolchain portion of runtime path of "/root/Shared/moveit_ws/install/moveit_cpp_planners/lib/moveit_cpp_planners/planning_scene_stomp" to ""
+-- Installing: /root/Shared/moveit_ws/install/moveit_cpp_planners/lib/moveit_cpp_planners/planning_scene_chomp
+-- Set non-toolchain portion of runtime path of "/root/Shared/moveit_ws/install/moveit_cpp_planners/lib/moveit_cpp_planners/planning_scene_chomp" to ""
+-- Installing: /root/Shared/moveit_ws/install/moveit_cpp_planners/lib/moveit_cpp_planners/planning_scene_service
+-- Set non-toolchain portion of runtime path of "/root/Shared/moveit_ws/install/moveit_cpp_planners/lib/moveit_cpp_planners/planning_scene_service" to ""
+-- Installing: /root/Shared/moveit_ws/install/moveit_cpp_planners/share/moveit_cpp_planners/launch
+-- Installing: /root/Shared/moveit_ws/install/moveit_cpp_planners/share/moveit_cpp_planners/launch/check_collisions.launch.py
+-- Installing: /root/Shared/moveit_ws/install/moveit_cpp_planners/share/moveit_cpp_planners/launch/planning_scene_chomp.launch.py
+-- Installing: /root/Shared/moveit_ws/install/moveit_cpp_planners/share/moveit_cpp_planners/launch/planning_scene_stomp.launch.py
+-- Installing: /root/Shared/moveit_ws/install/moveit_cpp_planners/share/moveit_cpp_planners/launch/kinematics.launch.py
+-- Installing: /root/Shared/moveit_ws/install/moveit_cpp_planners/share/moveit_cpp_planners/launch/hello_moveit.launch.py
+-- Installing: /root/Shared/moveit_ws/install/moveit_cpp_planners/share/moveit_cpp_planners/launch/planning_scene_ompl.launch.py
+-- Installing: /root/Shared/moveit_ws/install/moveit_cpp_planners/share/moveit_cpp_planners/launch/planning_scene_service.launch.py
+-- Installing: /root/Shared/moveit_ws/install/moveit_cpp_planners/share/moveit_cpp_planners/config
+-- Installing: /root/Shared/moveit_ws/install/moveit_cpp_planners/share/moveit_cpp_planners/config/ompl_planning.yaml
+-- Installing: /root/Shared/moveit_ws/install/moveit_cpp_planners/share/moveit_cpp_planners/config/stomp_planning.yaml
+-- Installing: /root/Shared/moveit_ws/install/moveit_cpp_planners/share/moveit_cpp_planners/config/chomp_planning.yaml
+-- Installing: /root/Shared/moveit_ws/install/moveit_cpp_planners/share/moveit_cpp_planners/config/kinematics.yaml
+-- Up-to-date: /root/Shared/moveit_ws/install/moveit_cpp_planners/share/ament_index/resource_index/package_run_dependencies/moveit_cpp_planners
+-- Up-to-date: /root/Shared/moveit_ws/install/moveit_cpp_planners/share/ament_index/resource_index/parent_prefix_path/moveit_cpp_planners
+-- Up-to-date: /root/Shared/moveit_ws/install/moveit_cpp_planners/share/moveit_cpp_planners/environment/ament_prefix_path.sh
+-- Up-to-date: /root/Shared/moveit_ws/install/moveit_cpp_planners/share/moveit_cpp_planners/environment/ament_prefix_path.dsv
+-- Up-to-date: /root/Shared/moveit_ws/install/moveit_cpp_planners/share/moveit_cpp_planners/environment/path.sh
+-- Up-to-date: /root/Shared/moveit_ws/install/moveit_cpp_planners/share/moveit_cpp_planners/environment/path.dsv
+-- Up-to-date: /root/Shared/moveit_ws/install/moveit_cpp_planners/share/moveit_cpp_planners/local_setup.bash
+-- Up-to-date: /root/Shared/moveit_ws/install/moveit_cpp_planners/share/moveit_cpp_planners/local_setup.sh
+-- Up-to-date: /root/Shared/moveit_ws/install/moveit_cpp_planners/share/moveit_cpp_planners/local_setup.zsh
+-- Up-to-date: /root/Shared/moveit_ws/install/moveit_cpp_planners/share/moveit_cpp_planners/local_setup.dsv
+-- Installing: /root/Shared/moveit_ws/install/moveit_cpp_planners/share/moveit_cpp_planners/package.dsv
+-- Up-to-date: /root/Shared/moveit_ws/install/moveit_cpp_planners/share/ament_index/resource_index/packages/moveit_cpp_planners
+-- Up-to-date: /root/Shared/moveit_ws/install/moveit_cpp_planners/share/moveit_cpp_planners/cmake/moveit_cpp_plannersConfig.cmake
+-- Up-to-date: /root/Shared/moveit_ws/install/moveit_cpp_planners/share/moveit_cpp_planners/cmake/moveit_cpp_plannersConfig-version.cmake
+-- Up-to-date: /root/Shared/moveit_ws/install/moveit_cpp_planners/share/moveit_cpp_planners/package.xml

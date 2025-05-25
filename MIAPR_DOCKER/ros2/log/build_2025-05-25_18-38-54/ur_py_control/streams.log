@@ -1,0 +1,23 @@
+[0.635s] Invoking command in '/root/Shared/moveit_ws/src/ur_py_control': PYTHONPATH=/root/Shared/moveit_ws/build/ur_py_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/root/Shared/moveit_ws/install/ur_py_control/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/ur_py_control build --build-base /root/Shared/moveit_ws/build/ur_py_control/build install --record /root/Shared/moveit_ws/build/ur_py_control/install.log --single-version-externally-managed install_data
+[0.829s] running egg_info
+[0.843s] writing ../../build/ur_py_control/ur_py_control.egg-info/PKG-INFO
+[0.843s] writing dependency_links to ../../build/ur_py_control/ur_py_control.egg-info/dependency_links.txt
+[0.843s] writing entry points to ../../build/ur_py_control/ur_py_control.egg-info/entry_points.txt
+[0.843s] writing requirements to ../../build/ur_py_control/ur_py_control.egg-info/requires.txt
+[0.843s] writing top-level names to ../../build/ur_py_control/ur_py_control.egg-info/top_level.txt
+[0.871s] reading manifest file '../../build/ur_py_control/ur_py_control.egg-info/SOURCES.txt'
+[0.872s] writing manifest file '../../build/ur_py_control/ur_py_control.egg-info/SOURCES.txt'
+[0.872s] running build
+[0.872s] running build_py
+[0.872s] running install
+[0.877s] running install_lib
+[0.892s] running install_data
+[0.892s] running install_egg_info
+[0.907s] removing '/root/Shared/moveit_ws/install/ur_py_control/lib/python3.12/site-packages/ur_py_control-0.0.0-py3.12.egg-info' (and everything under it)
+[0.907s] Copying ../../build/ur_py_control/ur_py_control.egg-info to /root/Shared/moveit_ws/install/ur_py_control/lib/python3.12/site-packages/ur_py_control-0.0.0-py3.12.egg-info
+[0.908s] running install_scripts
+[1.011s] Installing publisher_joint_trajectory_controller script to /root/Shared/moveit_ws/install/ur_py_control/lib/ur_py_control
+[1.011s] Installing publisher_joint_trajectory_controller_IK script to /root/Shared/moveit_ws/install/ur_py_control/lib/ur_py_control
+[1.011s] Installing show_joint_states script to /root/Shared/moveit_ws/install/ur_py_control/lib/ur_py_control
+[1.011s] writing list of installed files to '/root/Shared/moveit_ws/build/ur_py_control/install.log'
+[1.032s] Invoked command in '/root/Shared/moveit_ws/src/ur_py_control' returned '0': PYTHONPATH=/root/Shared/moveit_ws/build/ur_py_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/root/Shared/moveit_ws/install/ur_py_control/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/ur_py_control build --build-base /root/Shared/moveit_ws/build/ur_py_control/build install --record /root/Shared/moveit_ws/build/ur_py_control/install.log --single-version-externally-managed install_data

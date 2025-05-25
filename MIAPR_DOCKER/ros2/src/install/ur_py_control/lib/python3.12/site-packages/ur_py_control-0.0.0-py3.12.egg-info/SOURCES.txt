@@ -1,0 +1,17 @@
+package.xml
+setup.cfg
+setup.py
+../../build/ur_py_control/ur_py_control.egg-info/PKG-INFO
+../../build/ur_py_control/ur_py_control.egg-info/SOURCES.txt
+../../build/ur_py_control/ur_py_control.egg-info/dependency_links.txt
+../../build/ur_py_control/ur_py_control.egg-info/entry_points.txt
+../../build/ur_py_control/ur_py_control.egg-info/requires.txt
+../../build/ur_py_control/ur_py_control.egg-info/top_level.txt
+../../build/ur_py_control/ur_py_control.egg-info/zip-safe
+launch/joint_trajectory_controller.launch.py
+launch/joint_trajectory_controller_IK.launch.py
+resource/ur_py_control
+ur_py_control/__init__.py
+ur_py_control/publisher_joint_trajectory_controller.py
+ur_py_control/publisher_joint_trajectory_controller_IK.py
+ur_py_control/show_joint_states.py

@@ -1,0 +1,189 @@
+[0.000000] (-) TimerEvent: {}
+[0.000287] (moveit_cpp_planners) JobQueued: {'identifier': 'moveit_cpp_planners', 'dependencies': OrderedDict()}
+[0.000338] (ur_py_control) JobQueued: {'identifier': 'ur_py_control', 'dependencies': OrderedDict()}
+[0.000551] (moveit_cpp_planners) JobStarted: {'identifier': 'moveit_cpp_planners'}
+[0.006588] (ur_py_control) JobStarted: {'identifier': 'ur_py_control'}
+[0.011294] (moveit_cpp_planners) JobProgress: {'identifier': 'moveit_cpp_planners', 'progress': 'cmake'}
+[0.011856] (moveit_cpp_planners) JobProgress: {'identifier': 'moveit_cpp_planners', 'progress': 'build'}
+[0.012365] (moveit_cpp_planners) Command: {'cmd': ['/usr/bin/cmake', '--build', '/root/Shared/moveit_ws/build/moveit_cpp_planners', '--', '-j16', '-l16'], 'cwd': '/root/Shared/moveit_ws/build/moveit_cpp_planners', 'env': OrderedDict({'USER': 'root', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/sdformat_vendor/share/gz', 'HOSTNAME': 'jakub-Legion-5-15ARH7H', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/root', 'OLDPWD': '/root/Shared/moveit_ws/src', 'ROS_PYTHON_VERSION': '3', 'ROS_DISTRO': 'jazzy', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm', 'PATH': '/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'DISPLAY': ':1', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/root/Shared/moveit_ws/build/moveit_cpp_planners', 'LC_ALL': 'C.UTF-8', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[0.097748] (moveit_cpp_planners) StdoutLine: {'line': b'[ 28%] Built target check_collisions\n'}
+[0.097972] (moveit_cpp_planners) StdoutLine: {'line': b'[ 28%] Built target kinematics\n'}
+[0.099381] (-) TimerEvent: {}
+[0.103375] (moveit_cpp_planners) StdoutLine: {'line': b'[ 42%] \x1b[32mBuilding CXX object CMakeFiles/planning_scene_stomp.dir/src/planning_scene_stomp.cpp.o\x1b[0m\n'}
+[0.103618] (moveit_cpp_planners) StdoutLine: {'line': b'[ 50%] Built target planning_scene_ompl\n'}
+[0.104107] (moveit_cpp_planners) StdoutLine: {'line': b'[ 78%] Built target hello_moveit\n'}
+[0.104193] (moveit_cpp_planners) StdoutLine: {'line': b'[ 78%] Built target planning_scene_service\n'}
+[0.104481] (moveit_cpp_planners) StdoutLine: {'line': b'[ 85%] \x1b[32mBuilding CXX object CMakeFiles/planning_scene_chomp.dir/src/planning_scene_chomp.cpp.o\x1b[0m\n'}
+[0.199470] (-) TimerEvent: {}
+[0.299684] (-) TimerEvent: {}
+[0.399947] (-) TimerEvent: {}
+[0.500235] (-) TimerEvent: {}
+[0.600536] (-) TimerEvent: {}
+[0.644148] (ur_py_control) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/ur_py_control', 'build', '--build-base', '/root/Shared/moveit_ws/build/ur_py_control/build', 'install', '--record', '/root/Shared/moveit_ws/build/ur_py_control/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/root/Shared/moveit_ws/src/ur_py_control', 'env': {'USER': 'root', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/sdformat_vendor/share/gz', 'HOSTNAME': 'jakub-Legion-5-15ARH7H', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/root', 'OLDPWD': '/root/Shared/moveit_ws/src', 'ROS_PYTHON_VERSION': '3', 'ROS_DISTRO': 'jazzy', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm', 'PATH': '/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'DISPLAY': ':1', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/root/Shared/moveit_ws/build/ur_py_control', 'LC_ALL': 'C.UTF-8', 'PYTHONPATH': '/root/Shared/moveit_ws/build/ur_py_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/root/Shared/moveit_ws/install/ur_py_control/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor'}, 'shell': False}
+[0.700622] (-) TimerEvent: {}
+[0.800892] (-) TimerEvent: {}
+[0.847873] (ur_py_control) StdoutLine: {'line': b'running egg_info\n'}
+[0.861854] (ur_py_control) StdoutLine: {'line': b'writing ../../build/ur_py_control/ur_py_control.egg-info/PKG-INFO\n'}
+[0.862054] (ur_py_control) StdoutLine: {'line': b'writing dependency_links to ../../build/ur_py_control/ur_py_control.egg-info/dependency_links.txt\n'}
+[0.862226] (ur_py_control) StdoutLine: {'line': b'writing entry points to ../../build/ur_py_control/ur_py_control.egg-info/entry_points.txt\n'}
+[0.862338] (ur_py_control) StdoutLine: {'line': b'writing requirements to ../../build/ur_py_control/ur_py_control.egg-info/requires.txt\n'}
+[0.862438] (ur_py_control) StdoutLine: {'line': b'writing top-level names to ../../build/ur_py_control/ur_py_control.egg-info/top_level.txt\n'}
+[0.891041] (ur_py_control) StdoutLine: {'line': b"reading manifest file '../../build/ur_py_control/ur_py_control.egg-info/SOURCES.txt'\n"}
+[0.891635] (ur_py_control) StdoutLine: {'line': b"writing manifest file '../../build/ur_py_control/ur_py_control.egg-info/SOURCES.txt'\n"}
+[0.891761] (ur_py_control) StdoutLine: {'line': b'running build\n'}
+[0.891869] (ur_py_control) StdoutLine: {'line': b'running build_py\n'}
+[0.892094] (ur_py_control) StdoutLine: {'line': b'running install\n'}
+[0.896652] (ur_py_control) StdoutLine: {'line': b'running install_lib\n'}
+[0.900941] (-) TimerEvent: {}
+[0.911604] (ur_py_control) StdoutLine: {'line': b'running install_data\n'}
+[0.911767] (ur_py_control) StdoutLine: {'line': b'running install_egg_info\n'}
+[0.927084] (ur_py_control) StdoutLine: {'line': b"removing '/root/Shared/moveit_ws/install/ur_py_control/lib/python3.12/site-packages/ur_py_control-0.0.0-py3.12.egg-info' (and everything under it)\n"}
+[0.927404] (ur_py_control) StdoutLine: {'line': b'Copying ../../build/ur_py_control/ur_py_control.egg-info to /root/Shared/moveit_ws/install/ur_py_control/lib/python3.12/site-packages/ur_py_control-0.0.0-py3.12.egg-info\n'}
+[0.928246] (ur_py_control) StdoutLine: {'line': b'running install_scripts\n'}
+[1.001030] (-) TimerEvent: {}
+[1.036986] (ur_py_control) StdoutLine: {'line': b'Installing publisher_joint_trajectory_controller script to /root/Shared/moveit_ws/install/ur_py_control/lib/ur_py_control\n'}
+[1.037195] (ur_py_control) StdoutLine: {'line': b'Installing publisher_joint_trajectory_controller_IK script to /root/Shared/moveit_ws/install/ur_py_control/lib/ur_py_control\n'}
+[1.037326] (ur_py_control) StdoutLine: {'line': b'Installing show_joint_states script to /root/Shared/moveit_ws/install/ur_py_control/lib/ur_py_control\n'}
+[1.037636] (ur_py_control) StdoutLine: {'line': b"writing list of installed files to '/root/Shared/moveit_ws/build/ur_py_control/install.log'\n"}
+[1.064218] (ur_py_control) CommandEnded: {'returncode': 0}
+[1.072604] (ur_py_control) JobEnded: {'identifier': 'ur_py_control', 'rc': 0}
+[1.101147] (-) TimerEvent: {}
+[1.201435] (-) TimerEvent: {}
+[1.301752] (-) TimerEvent: {}
+[1.402071] (-) TimerEvent: {}
+[1.502393] (-) TimerEvent: {}
+[1.602722] (-) TimerEvent: {}
+[1.703043] (-) TimerEvent: {}
+[1.803401] (-) TimerEvent: {}
+[1.903733] (-) TimerEvent: {}
+[2.004033] (-) TimerEvent: {}
+[2.104307] (-) TimerEvent: {}
+[2.204695] (-) TimerEvent: {}
+[2.305009] (-) TimerEvent: {}
+[2.405323] (-) TimerEvent: {}
+[2.505665] (-) TimerEvent: {}
+[2.605996] (-) TimerEvent: {}
+[2.706316] (-) TimerEvent: {}
+[2.806642] (-) TimerEvent: {}
+[2.906961] (-) TimerEvent: {}
+[3.007289] (-) TimerEvent: {}
+[3.107607] (-) TimerEvent: {}
+[3.207925] (-) TimerEvent: {}
+[3.308235] (-) TimerEvent: {}
+[3.408554] (-) TimerEvent: {}
+[3.508892] (-) TimerEvent: {}
+[3.609190] (-) TimerEvent: {}
+[3.709506] (-) TimerEvent: {}
+[3.809781] (-) TimerEvent: {}
+[3.910091] (-) TimerEvent: {}
+[4.010387] (-) TimerEvent: {}
+[4.110669] (-) TimerEvent: {}
+[4.210953] (-) TimerEvent: {}
+[4.311211] (-) TimerEvent: {}
+[4.411496] (-) TimerEvent: {}
+[4.511798] (-) TimerEvent: {}
+[4.612097] (-) TimerEvent: {}
+[4.712406] (-) TimerEvent: {}
+[4.812739] (-) TimerEvent: {}
+[4.913053] (-) TimerEvent: {}
+[5.013387] (-) TimerEvent: {}
+[5.113708] (-) TimerEvent: {}
+[5.214012] (-) TimerEvent: {}
+[5.314328] (-) TimerEvent: {}
+[5.414625] (-) TimerEvent: {}
+[5.514910] (-) TimerEvent: {}
+[5.615155] (-) TimerEvent: {}
+[5.715498] (-) TimerEvent: {}
+[5.815803] (-) TimerEvent: {}
+[5.916160] (-) TimerEvent: {}
+[6.016487] (-) TimerEvent: {}
+[6.116770] (-) TimerEvent: {}
+[6.217101] (-) TimerEvent: {}
+[6.317448] (-) TimerEvent: {}
+[6.417764] (-) TimerEvent: {}
+[6.518081] (-) TimerEvent: {}
+[6.618400] (-) TimerEvent: {}
+[6.718732] (-) TimerEvent: {}
+[6.819057] (-) TimerEvent: {}
+[6.919380] (-) TimerEvent: {}
+[7.019714] (-) TimerEvent: {}
+[7.120028] (-) TimerEvent: {}
+[7.220347] (-) TimerEvent: {}
+[7.320652] (-) TimerEvent: {}
+[7.420972] (-) TimerEvent: {}
+[7.521297] (-) TimerEvent: {}
+[7.621637] (-) TimerEvent: {}
+[7.722012] (-) TimerEvent: {}
+[7.822341] (-) TimerEvent: {}
+[7.922674] (-) TimerEvent: {}
+[8.022967] (-) TimerEvent: {}
+[8.123279] (-) TimerEvent: {}
+[8.223583] (-) TimerEvent: {}
+[8.323874] (-) TimerEvent: {}
+[8.424154] (-) TimerEvent: {}
+[8.524485] (-) TimerEvent: {}
+[8.624780] (-) TimerEvent: {}
+[8.725079] (-) TimerEvent: {}
+[8.825365] (-) TimerEvent: {}
+[8.925694] (-) TimerEvent: {}
+[9.025992] (-) TimerEvent: {}
+[9.088972] (moveit_cpp_planners) StdoutLine: {'line': b'[ 92%] \x1b[32m\x1b[1mLinking CXX executable planning_scene_stomp\x1b[0m\n'}
+[9.126091] (-) TimerEvent: {}
+[9.142262] (moveit_cpp_planners) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable planning_scene_chomp\x1b[0m\n'}
+[9.226222] (-) TimerEvent: {}
+[9.326556] (-) TimerEvent: {}
+[9.426895] (-) TimerEvent: {}
+[9.527233] (-) TimerEvent: {}
+[9.627555] (-) TimerEvent: {}
+[9.669631] (moveit_cpp_planners) StdoutLine: {'line': b'[100%] Built target planning_scene_stomp\n'}
+[9.712235] (moveit_cpp_planners) StdoutLine: {'line': b'[100%] Built target planning_scene_chomp\n'}
+[9.723225] (moveit_cpp_planners) CommandEnded: {'returncode': 0}
+[9.723794] (moveit_cpp_planners) JobProgress: {'identifier': 'moveit_cpp_planners', 'progress': 'install'}
+[9.727619] (-) TimerEvent: {}
+[9.733395] (moveit_cpp_planners) Command: {'cmd': ['/usr/bin/cmake', '--install', '/root/Shared/moveit_ws/build/moveit_cpp_planners'], 'cwd': '/root/Shared/moveit_ws/build/moveit_cpp_planners', 'env': OrderedDict({'USER': 'root', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/sdformat_vendor/share/gz', 'HOSTNAME': 'jakub-Legion-5-15ARH7H', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/root', 'OLDPWD': '/root/Shared/moveit_ws/src', 'ROS_PYTHON_VERSION': '3', 'ROS_DISTRO': 'jazzy', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm', 'PATH': '/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'DISPLAY': ':1', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/root/Shared/moveit_ws/build/moveit_cpp_planners', 'LC_ALL': 'C.UTF-8', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[9.740928] (moveit_cpp_planners) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[9.741142] (moveit_cpp_planners) StdoutLine: {'line': b'-- Installing: /root/Shared/moveit_ws/install/moveit_cpp_planners/lib/moveit_cpp_planners/hello_moveit\n'}
+[9.741808] (moveit_cpp_planners) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/root/Shared/moveit_ws/install/moveit_cpp_planners/lib/moveit_cpp_planners/hello_moveit" to ""\n'}
+[9.741900] (moveit_cpp_planners) StdoutLine: {'line': b'-- Installing: /root/Shared/moveit_ws/install/moveit_cpp_planners/lib/moveit_cpp_planners/kinematics\n'}
+[9.742354] (moveit_cpp_planners) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/root/Shared/moveit_ws/install/moveit_cpp_planners/lib/moveit_cpp_planners/kinematics" to ""\n'}
+[9.742427] (moveit_cpp_planners) StdoutLine: {'line': b'-- Installing: /root/Shared/moveit_ws/install/moveit_cpp_planners/lib/moveit_cpp_planners/check_collisions\n'}
+[9.742883] (moveit_cpp_planners) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/root/Shared/moveit_ws/install/moveit_cpp_planners/lib/moveit_cpp_planners/check_collisions" to ""\n'}
+[9.742957] (moveit_cpp_planners) StdoutLine: {'line': b'-- Installing: /root/Shared/moveit_ws/install/moveit_cpp_planners/lib/moveit_cpp_planners/planning_scene_ompl\n'}
+[9.743772] (moveit_cpp_planners) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/root/Shared/moveit_ws/install/moveit_cpp_planners/lib/moveit_cpp_planners/planning_scene_ompl" to ""\n'}
+[9.743849] (moveit_cpp_planners) StdoutLine: {'line': b'-- Installing: /root/Shared/moveit_ws/install/moveit_cpp_planners/lib/moveit_cpp_planners/planning_scene_stomp\n'}
+[9.744633] (moveit_cpp_planners) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/root/Shared/moveit_ws/install/moveit_cpp_planners/lib/moveit_cpp_planners/planning_scene_stomp" to ""\n'}
+[9.744718] (moveit_cpp_planners) StdoutLine: {'line': b'-- Installing: /root/Shared/moveit_ws/install/moveit_cpp_planners/lib/moveit_cpp_planners/planning_scene_chomp\n'}
+[9.745542] (moveit_cpp_planners) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/root/Shared/moveit_ws/install/moveit_cpp_planners/lib/moveit_cpp_planners/planning_scene_chomp" to ""\n'}
+[9.745623] (moveit_cpp_planners) StdoutLine: {'line': b'-- Installing: /root/Shared/moveit_ws/install/moveit_cpp_planners/lib/moveit_cpp_planners/planning_scene_service\n'}
+[9.747148] (moveit_cpp_planners) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/root/Shared/moveit_ws/install/moveit_cpp_planners/lib/moveit_cpp_planners/planning_scene_service" to ""\n'}
+[9.747229] (moveit_cpp_planners) StdoutLine: {'line': b'-- Installing: /root/Shared/moveit_ws/install/moveit_cpp_planners/share/moveit_cpp_planners/launch\n'}
+[9.747297] (moveit_cpp_planners) StdoutLine: {'line': b'-- Installing: /root/Shared/moveit_ws/install/moveit_cpp_planners/share/moveit_cpp_planners/launch/check_collisions.launch.py\n'}
+[9.747533] (moveit_cpp_planners) StdoutLine: {'line': b'-- Installing: /root/Shared/moveit_ws/install/moveit_cpp_planners/share/moveit_cpp_planners/launch/planning_scene_chomp.launch.py\n'}
+[9.747633] (moveit_cpp_planners) StdoutLine: {'line': b'-- Installing: /root/Shared/moveit_ws/install/moveit_cpp_planners/share/moveit_cpp_planners/launch/planning_scene_stomp.launch.py\n'}
+[9.747732] (moveit_cpp_planners) StdoutLine: {'line': b'-- Installing: /root/Shared/moveit_ws/install/moveit_cpp_planners/share/moveit_cpp_planners/launch/kinematics.launch.py\n'}
+[9.747915] (moveit_cpp_planners) StdoutLine: {'line': b'-- Installing: /root/Shared/moveit_ws/install/moveit_cpp_planners/share/moveit_cpp_planners/launch/hello_moveit.launch.py\n'}
+[9.748132] (moveit_cpp_planners) StdoutLine: {'line': b'-- Installing: /root/Shared/moveit_ws/install/moveit_cpp_planners/share/moveit_cpp_planners/launch/planning_scene_ompl.launch.py\n'}
+[9.748258] (moveit_cpp_planners) StdoutLine: {'line': b'-- Installing: /root/Shared/moveit_ws/install/moveit_cpp_planners/share/moveit_cpp_planners/launch/planning_scene_service.launch.py\n'}
+[9.748406] (moveit_cpp_planners) StdoutLine: {'line': b'-- Installing: /root/Shared/moveit_ws/install/moveit_cpp_planners/share/moveit_cpp_planners/config\n'}
+[9.748549] (moveit_cpp_planners) StdoutLine: {'line': b'-- Installing: /root/Shared/moveit_ws/install/moveit_cpp_planners/share/moveit_cpp_planners/config/ompl_planning.yaml\n'}
+[9.748705] (moveit_cpp_planners) StdoutLine: {'line': b'-- Installing: /root/Shared/moveit_ws/install/moveit_cpp_planners/share/moveit_cpp_planners/config/stomp_planning.yaml\n'}
+[9.748841] (moveit_cpp_planners) StdoutLine: {'line': b'-- Installing: /root/Shared/moveit_ws/install/moveit_cpp_planners/share/moveit_cpp_planners/config/chomp_planning.yaml\n'}
+[9.748955] (moveit_cpp_planners) StdoutLine: {'line': b'-- Installing: /root/Shared/moveit_ws/install/moveit_cpp_planners/share/moveit_cpp_planners/config/kinematics.yaml\n'}
+[9.749027] (moveit_cpp_planners) StdoutLine: {'line': b'-- Up-to-date: /root/Shared/moveit_ws/install/moveit_cpp_planners/share/ament_index/resource_index/package_run_dependencies/moveit_cpp_planners\n'}
+[9.749102] (moveit_cpp_planners) StdoutLine: {'line': b'-- Up-to-date: /root/Shared/moveit_ws/install/moveit_cpp_planners/share/ament_index/resource_index/parent_prefix_path/moveit_cpp_planners\n'}
+[9.749152] (moveit_cpp_planners) StdoutLine: {'line': b'-- Up-to-date: /root/Shared/moveit_ws/install/moveit_cpp_planners/share/moveit_cpp_planners/environment/ament_prefix_path.sh\n'}
+[9.749199] (moveit_cpp_planners) StdoutLine: {'line': b'-- Up-to-date: /root/Shared/moveit_ws/install/moveit_cpp_planners/share/moveit_cpp_planners/environment/ament_prefix_path.dsv\n'}
+[9.749245] (moveit_cpp_planners) StdoutLine: {'line': b'-- Up-to-date: /root/Shared/moveit_ws/install/moveit_cpp_planners/share/moveit_cpp_planners/environment/path.sh\n'}
+[9.749290] (moveit_cpp_planners) StdoutLine: {'line': b'-- Up-to-date: /root/Shared/moveit_ws/install/moveit_cpp_planners/share/moveit_cpp_planners/environment/path.dsv\n'}
+[9.749365] (moveit_cpp_planners) StdoutLine: {'line': b'-- Up-to-date: /root/Shared/moveit_ws/install/moveit_cpp_planners/share/moveit_cpp_planners/local_setup.bash\n'}
+[9.749415] (moveit_cpp_planners) StdoutLine: {'line': b'-- Up-to-date: /root/Shared/moveit_ws/install/moveit_cpp_planners/share/moveit_cpp_planners/local_setup.sh\n'}
+[9.749516] (moveit_cpp_planners) StdoutLine: {'line': b'-- Up-to-date: /root/Shared/moveit_ws/install/moveit_cpp_planners/share/moveit_cpp_planners/local_setup.zsh\n'}
+[9.749569] (moveit_cpp_planners) StdoutLine: {'line': b'-- Up-to-date: /root/Shared/moveit_ws/install/moveit_cpp_planners/share/moveit_cpp_planners/local_setup.dsv\n'}
+[9.749613] (moveit_cpp_planners) StdoutLine: {'line': b'-- Installing: /root/Shared/moveit_ws/install/moveit_cpp_planners/share/moveit_cpp_planners/package.dsv\n'}
+[9.749657] (moveit_cpp_planners) StdoutLine: {'line': b'-- Up-to-date: /root/Shared/moveit_ws/install/moveit_cpp_planners/share/ament_index/resource_index/packages/moveit_cpp_planners\n'}
+[9.749701] (moveit_cpp_planners) StdoutLine: {'line': b'-- Up-to-date: /root/Shared/moveit_ws/install/moveit_cpp_planners/share/moveit_cpp_planners/cmake/moveit_cpp_plannersConfig.cmake\n'}
+[9.749744] (moveit_cpp_planners) StdoutLine: {'line': b'-- Up-to-date: /root/Shared/moveit_ws/install/moveit_cpp_planners/share/moveit_cpp_planners/cmake/moveit_cpp_plannersConfig-version.cmake\n'}
+[9.749786] (moveit_cpp_planners) StdoutLine: {'line': b'-- Up-to-date: /root/Shared/moveit_ws/install/moveit_cpp_planners/share/moveit_cpp_planners/package.xml\n'}
+[9.751174] (moveit_cpp_planners) CommandEnded: {'returncode': 0}
+[9.759589] (moveit_cpp_planners) JobEnded: {'identifier': 'moveit_cpp_planners', 'rc': 0}
+[9.760187] (-) EventReactorShutdown: {}

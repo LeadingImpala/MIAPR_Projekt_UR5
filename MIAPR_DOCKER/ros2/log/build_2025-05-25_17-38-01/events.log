@@ -1,0 +1,197 @@
+[0.000000] (-) TimerEvent: {}
+[0.000492] (ros2_ur_moveit_examples) JobQueued: {'identifier': 'ros2_ur_moveit_examples', 'dependencies': OrderedDict()}
+[0.000548] (ros2_ur_moveit_examples) JobStarted: {'identifier': 'ros2_ur_moveit_examples'}
+[0.008387] (ros2_ur_moveit_examples) JobProgress: {'identifier': 'ros2_ur_moveit_examples', 'progress': 'cmake'}
+[0.009158] (ros2_ur_moveit_examples) Command: {'cmd': ['/usr/bin/cmake', '/root/Shared/moveit_ws', '-DCMAKE_INSTALL_PREFIX=/root/Shared/moveit_ws/install/ros2_ur_moveit_examples'], 'cwd': '/root/Shared/moveit_ws/build/ros2_ur_moveit_examples', 'env': OrderedDict({'USER': 'root', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/sdformat_vendor/share/gz', 'HOSTNAME': 'jakub-Legion-5-15ARH7H', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/root', 'OLDPWD': '/root/Shared/moveit_ws/src', 'ROS_PYTHON_VERSION': '3', 'ROS_DISTRO': 'jazzy', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm', 'PATH': '/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'DISPLAY': ':1', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/root/Shared/moveit_ws/build/ros2_ur_moveit_examples', 'LC_ALL': 'C.UTF-8', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[0.061953] (ros2_ur_moveit_examples) StdoutLine: {'line': b'-- The C compiler identification is GNU 13.3.0\n'}
+[0.099836] (-) TimerEvent: {}
+[0.111443] (ros2_ur_moveit_examples) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 13.3.0\n'}
+[0.128176] (ros2_ur_moveit_examples) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.199938] (-) TimerEvent: {}
+[0.213109] (ros2_ur_moveit_examples) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.219904] (ros2_ur_moveit_examples) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.220120] (ros2_ur_moveit_examples) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.220435] (ros2_ur_moveit_examples) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.229938] (ros2_ur_moveit_examples) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.300043] (-) TimerEvent: {}
+[0.325936] (ros2_ur_moveit_examples) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.333142] (ros2_ur_moveit_examples) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.333381] (ros2_ur_moveit_examples) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.333711] (ros2_ur_moveit_examples) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.400140] (-) TimerEvent: {}
+[0.474725] (ros2_ur_moveit_examples) StdoutLine: {'line': b'-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: system filesystem date_time thread \n'}
+[0.481204] (ros2_ur_moveit_examples) StdoutLine: {'line': b'-- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)\n'}
+[0.500232] (-) TimerEvent: {}
+[0.600526] (-) TimerEvent: {}
+[0.621681] (ros2_ur_moveit_examples) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter \n'}
+[0.700659] (-) TimerEvent: {}
+[0.752254] (ros2_ur_moveit_examples) StdoutLine: {'line': b'-- Found control_msgs: 5.4.0 (/opt/ros/jazzy/share/control_msgs/cmake)\n'}
+[0.800792] (-) TimerEvent: {}
+[0.817394] (ros2_ur_moveit_examples) StdoutLine: {'line': b'-- Found rosidl_generator_c: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)\n'}
+[0.838780] (ros2_ur_moveit_examples) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)\n'}
+[0.862435] (ros2_ur_moveit_examples) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.887400] (ros2_ur_moveit_examples) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.900870] (-) TimerEvent: {}
+[1.001143] (-) TimerEvent: {}
+[1.078913] (ros2_ur_moveit_examples) StdoutLine: {'line': b'-- Found moveit_common: 2.12.3 (/opt/ros/jazzy/share/moveit_common/cmake)\n'}
+[1.084414] (ros2_ur_moveit_examples) StdoutLine: {'line': b'-- Found moveit_core: 2.12.3 (/opt/ros/jazzy/share/moveit_core/cmake)\n'}
+[1.101221] (-) TimerEvent: {}
+[1.116641] (ros2_ur_moveit_examples) StdoutLine: {'line': b'-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: chrono date_time filesystem iostreams program_options regex serialization system thread \n'}
+[1.195966] (ros2_ur_moveit_examples) StdoutLine: {'line': b'-- Found parameter_traits: 0.4.0 (/opt/ros/jazzy/share/parameter_traits/cmake)\n'}
+[1.201293] (-) TimerEvent: {}
+[1.263067] (ros2_ur_moveit_examples) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)\n'}
+[1.268509] (ros2_ur_moveit_examples) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 8.4.2 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)\n'}
+[1.301395] (-) TimerEvent: {}
+[1.368275] (ros2_ur_moveit_examples) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  \n'}
+[1.381019] (ros2_ur_moveit_examples) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") \n'}
+[1.401451] (ros2_ur_moveit_examples) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[1.401606] (-) TimerEvent: {}
+[1.501792] (-) TimerEvent: {}
+[1.506413] (ros2_ur_moveit_examples) StdoutLine: {'line': b'-- Found rclcpp_lifecycle: 28.1.9 (/opt/ros/jazzy/share/rclcpp_lifecycle/cmake)\n'}
+[1.548780] (ros2_ur_moveit_examples) StdoutLine: {'line': b'-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: filesystem \n'}
+[1.601897] (-) TimerEvent: {}
+[1.649812] (ros2_ur_moveit_examples) StdoutLine: {'line': b'-- Found Eigen3: TRUE (found version "3.4.0") \n'}
+[1.649974] (ros2_ur_moveit_examples) StdoutLine: {'line': b'-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target\n'}
+[1.701998] (-) TimerEvent: {}
+[1.802307] (-) TimerEvent: {}
+[1.902596] (-) TimerEvent: {}
+[1.971445] (ros2_ur_moveit_examples) StdoutLine: {'line': b'-- Found moveit_ros_planning: 2.12.3 (/opt/ros/jazzy/share/moveit_ros_planning/cmake)\n'}
+[1.975548] (ros2_ur_moveit_examples) StdoutLine: {'line': b'-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: system filesystem date_time program_options thread chrono \n'}
+[2.002694] (-) TimerEvent: {}
+[2.021449] (ros2_ur_moveit_examples) StdoutLine: {'line': b'-- Found moveit_ros_planning_interface: 2.12.3 (/opt/ros/jazzy/share/moveit_ros_planning_interface/cmake)\n'}
+[2.025566] (ros2_ur_moveit_examples) StdoutLine: {'line': b'-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: date_time filesystem program_options system thread \n'}
+[2.044160] (ros2_ur_moveit_examples) StdoutLine: {'line': b'-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: thread system filesystem regex date_time program_options \n'}
+[2.073552] (ros2_ur_moveit_examples) StdoutLine: {'line': b'-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.83.0/BoostConfig.cmake (found version "1.83.0") found components: system filesystem date_time program_options thread \n'}
+[2.102786] (-) TimerEvent: {}
+[2.113919] (ros2_ur_moveit_examples) StdoutLine: {'line': b'-- Found moveit_servo: 2.12.3 (/opt/ros/jazzy/share/moveit_servo/cmake)\n'}
+[2.151200] (ros2_ur_moveit_examples) StdoutLine: {'line': b'-- Found interactive_markers: 2.5.4 (/opt/ros/jazzy/share/interactive_markers/cmake)\n'}
+[2.160167] (ros2_ur_moveit_examples) StdoutLine: {'line': b'-- Found rviz_visual_tools: 4.1.4 (/opt/ros/jazzy/share/rviz_visual_tools/cmake)\n'}
+[2.195041] (ros2_ur_moveit_examples) StdoutLine: {'line': b"-- Setting OGRE_DIR to: '/opt/ros/jazzy/share/rviz_ogre_vendor/cmake/../../../opt/rviz_ogre_vendor/lib/OGRE/cmake'\n"}
+[2.196101] (ros2_ur_moveit_examples) StdoutLine: {'line': b'-- Found OGRE\n'}
+[2.196417] (ros2_ur_moveit_examples) StdoutLine: {'line': b'--   static     : OFF\n'}
+[2.196534] (ros2_ur_moveit_examples) StdoutLine: {'line': b'--   components : MeshLodGenerator;Overlay;Paging;Property;RTShaderSystem;Terrain;Volume\n'}
+[2.196607] (ros2_ur_moveit_examples) StdoutLine: {'line': b'--   plugins    : Plugin_BSPSceneManager;Plugin_OctreeSceneManager;Plugin_PCZSceneManager;Plugin_ParticleFX;RenderSystem_GL;RenderSystem_GL3Plus;Codec_STBI\n'}
+[2.196678] (ros2_ur_moveit_examples) StdoutLine: {'line': b'--   media      : /opt/ros/jazzy/opt/rviz_ogre_vendor/share/OGRE/Media\n'}
+[2.196746] (ros2_ur_moveit_examples) StdoutLine: {'line': b'-- OGRE_LIBRARIES: OgreMeshLodGenerator;OgreOverlay;OgrePaging;OgreProperty;OgreRTShaderSystem;OgreTerrain;OgreVolume;OgreMain\n'}
+[2.196837] (ros2_ur_moveit_examples) StdoutLine: {'line': b'-- OGRE_LIBRARY_DIRS: /opt/ros/jazzy/opt/rviz_ogre_vendor/lib\n'}
+[2.196905] (ros2_ur_moveit_examples) StdoutLine: {'line': b'-- OGRE_PLUGINS: Plugin_BSPSceneManager;Plugin_OctreeSceneManager;Plugin_PCZSceneManager;Plugin_ParticleFX;RenderSystem_GL;RenderSystem_GL3Plus;Codec_STBI\n'}
+[2.196972] (ros2_ur_moveit_examples) StdoutLine: {'line': b'-- OGRE_PLUGIN_DIR: /opt/ros/jazzy/opt/rviz_ogre_vendor/lib/OGRE\n'}
+[2.197036] (ros2_ur_moveit_examples) StdoutLine: {'line': b'-- rviz_ogre_vendor::OgreOverlay for IMPORTED_LOCATION_RELEASE: /opt/ros/jazzy/opt/rviz_ogre_vendor/lib/libOgreOverlay.so\n'}
+[2.197112] (ros2_ur_moveit_examples) StdoutLine: {'line': b'-- rviz_ogre_vendor::OgreOverlay for IMPORTED_LOCATION_DEBUG: /opt/ros/jazzy/opt/rviz_ogre_vendor/lib/libOgreOverlay.so\n'}
+[2.197179] (ros2_ur_moveit_examples) StdoutLine: {'line': b'-- rviz_ogre_vendor::OgreMain for IMPORTED_LOCATION_RELEASE: /opt/ros/jazzy/opt/rviz_ogre_vendor/lib/libOgreMain.so\n'}
+[2.197245] (ros2_ur_moveit_examples) StdoutLine: {'line': b'-- rviz_ogre_vendor::OgreMain for IMPORTED_LOCATION_DEBUG: /opt/ros/jazzy/opt/rviz_ogre_vendor/lib/libOgreMain.so\n'}
+[2.197630] (ros2_ur_moveit_examples) StdoutLine: {'line': b'-- Could not find freeimage library\n'}
+[2.202846] (-) TimerEvent: {}
+[2.215140] (ros2_ur_moveit_examples) StdoutLine: {'line': b'-- Found ZLIB: /usr/lib/x86_64-linux-gnu/libz.so (found version "1.3")  \n'}
+[2.220576] (ros2_ur_moveit_examples) StdoutLine: {'line': b'-- Found OpenGL: /usr/lib/x86_64-linux-gnu/libOpenGL.so   \n'}
+[2.302956] (-) TimerEvent: {}
+[2.340671] (ros2_ur_moveit_examples) StdoutLine: {'line': b'-- Found X11: /usr/include   \n'}
+[2.340936] (ros2_ur_moveit_examples) StdoutLine: {'line': b'-- Looking for XOpenDisplay in /usr/lib/x86_64-linux-gnu/libX11.so;/usr/lib/x86_64-linux-gnu/libXext.so\n'}
+[2.403057] (-) TimerEvent: {}
+[2.422875] (ros2_ur_moveit_examples) StdoutLine: {'line': b'-- Looking for XOpenDisplay in /usr/lib/x86_64-linux-gnu/libX11.so;/usr/lib/x86_64-linux-gnu/libXext.so - found\n'}
+[2.424541] (ros2_ur_moveit_examples) StdoutLine: {'line': b'-- Looking for gethostbyname\n'}
+[2.503156] (-) TimerEvent: {}
+[2.506970] (ros2_ur_moveit_examples) StdoutLine: {'line': b'-- Looking for gethostbyname - found\n'}
+[2.507133] (ros2_ur_moveit_examples) StdoutLine: {'line': b'-- Looking for connect\n'}
+[2.589414] (ros2_ur_moveit_examples) StdoutLine: {'line': b'-- Looking for connect - found\n'}
+[2.589639] (ros2_ur_moveit_examples) StdoutLine: {'line': b'-- Looking for remove\n'}
+[2.603264] (-) TimerEvent: {}
+[2.671537] (ros2_ur_moveit_examples) StdoutLine: {'line': b'-- Looking for remove - found\n'}
+[2.671698] (ros2_ur_moveit_examples) StdoutLine: {'line': b'-- Looking for shmat\n'}
+[2.703369] (-) TimerEvent: {}
+[2.748700] (ros2_ur_moveit_examples) StdoutLine: {'line': b'-- Looking for shmat - found\n'}
+[2.749044] (ros2_ur_moveit_examples) StdoutLine: {'line': b'-- Looking for IceConnectionNumber in ICE\n'}
+[2.803466] (-) TimerEvent: {}
+[2.834629] (ros2_ur_moveit_examples) StdoutLine: {'line': b'-- Looking for IceConnectionNumber in ICE - found\n'}
+[2.854426] (ros2_ur_moveit_examples) StdoutLine: {'line': b"-- Setting yaml-cpp_DIR to: '/opt/ros/jazzy/share/yaml_cpp_vendor/cmake/../../../opt/yaml_cpp_vendor/share/cmake/yaml-cpp'\n"}
+[2.903568] (-) TimerEvent: {}
+[2.979914] (ros2_ur_moveit_examples) StdoutLine: {'line': b'-- Found moveit_visual_tools: 4.1.2 (/opt/ros/jazzy/share/moveit_visual_tools/cmake)\n'}
+[3.003697] (-) TimerEvent: {}
+[3.038155] (ros2_ur_moveit_examples) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.17.2 (/opt/ros/jazzy/share/ament_lint_auto/cmake)\n'}
+[3.103794] (-) TimerEvent: {}
+[3.165834] (ros2_ur_moveit_examples) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[3.167044] (ros2_ur_moveit_examples) StdoutLine: {'line': b'-- Configured cppcheck include dirs: /root/Shared/moveit_ws/include\n'}
+[3.167140] (ros2_ur_moveit_examples) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[3.170691] (ros2_ur_moveit_examples) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[3.170870] (ros2_ur_moveit_examples) StdoutLine: {'line': b"-- Configured 'flake8' exclude dirs and/or files: \n"}
+[3.176762] (ros2_ur_moveit_examples) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[3.180087] (ros2_ur_moveit_examples) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257\n"}
+[3.203244] (ros2_ur_moveit_examples) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[3.203493] (ros2_ur_moveit_examples) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[3.203859] (-) TimerEvent: {}
+[3.206678] (ros2_ur_moveit_examples) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[3.208011] (ros2_ur_moveit_examples) StdoutLine: {'line': b'-- Configuring done (3.2s)\n'}
+[3.217157] (ros2_ur_moveit_examples) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:58 (add_executable):\n'}
+[3.217339] (ros2_ur_moveit_examples) StderrLine: {'line': b'  Cannot find source file:\n'}
+[3.217461] (ros2_ur_moveit_examples) StderrLine: {'line': b'\n'}
+[3.217555] (ros2_ur_moveit_examples) StderrLine: {'line': b'    src/hello_moveit.cpp\n'}
+[3.217650] (ros2_ur_moveit_examples) StderrLine: {'line': b'\n'}
+[3.217736] (ros2_ur_moveit_examples) StderrLine: {'line': b'  Tried extensions .c .C .c++ .cc .cpp .cxx .cu .mpp .m .M .mm .ixx .cppm\n'}
+[3.217822] (ros2_ur_moveit_examples) StderrLine: {'line': b'  .ccm .cxxm .c++m .h .hh .h++ .hm .hpp .hxx .in .txx .f .F .for .f77 .f90\n'}
+[3.217904] (ros2_ur_moveit_examples) StderrLine: {'line': b'  .f95 .f03 .hip .ispc\n'}
+[3.217985] (ros2_ur_moveit_examples) StderrLine: {'line': b'\n'}
+[3.218066] (ros2_ur_moveit_examples) StderrLine: {'line': b'\x1b[0m\n'}
+[3.221719] (ros2_ur_moveit_examples) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:62 (add_executable):\n'}
+[3.221853] (ros2_ur_moveit_examples) StderrLine: {'line': b'  Cannot find source file:\n'}
+[3.221958] (ros2_ur_moveit_examples) StderrLine: {'line': b'\n'}
+[3.222048] (ros2_ur_moveit_examples) StderrLine: {'line': b'    src/kinematics.cpp\n'}
+[3.222148] (ros2_ur_moveit_examples) StderrLine: {'line': b'\n'}
+[3.222238] (ros2_ur_moveit_examples) StderrLine: {'line': b'  Tried extensions .c .C .c++ .cc .cpp .cxx .cu .mpp .m .M .mm .ixx .cppm\n'}
+[3.222489] (ros2_ur_moveit_examples) StderrLine: {'line': b'  .ccm .cxxm .c++m .h .hh .h++ .hm .hpp .hxx .in .txx .f .F .for .f77 .f90\n'}
+[3.222603] (ros2_ur_moveit_examples) StderrLine: {'line': b'  .f95 .f03 .hip .ispc\n'}
+[3.222688] (ros2_ur_moveit_examples) StderrLine: {'line': b'\n'}
+[3.222770] (ros2_ur_moveit_examples) StderrLine: {'line': b'\x1b[0m\n'}
+[3.222850] (ros2_ur_moveit_examples) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:66 (add_executable):\n'}
+[3.222929] (ros2_ur_moveit_examples) StderrLine: {'line': b'  Cannot find source file:\n'}
+[3.223007] (ros2_ur_moveit_examples) StderrLine: {'line': b'\n'}
+[3.223078] (ros2_ur_moveit_examples) StderrLine: {'line': b'    src/check_collisions.cpp\n'}
+[3.223119] (ros2_ur_moveit_examples) StderrLine: {'line': b'\n'}
+[3.223160] (ros2_ur_moveit_examples) StderrLine: {'line': b'  Tried extensions .c .C .c++ .cc .cpp .cxx .cu .mpp .m .M .mm .ixx .cppm\n'}
+[3.223201] (ros2_ur_moveit_examples) StderrLine: {'line': b'  .ccm .cxxm .c++m .h .hh .h++ .hm .hpp .hxx .in .txx .f .F .for .f77 .f90\n'}
+[3.223242] (ros2_ur_moveit_examples) StderrLine: {'line': b'  .f95 .f03 .hip .ispc\n'}
+[3.223281] (ros2_ur_moveit_examples) StderrLine: {'line': b'\n'}
+[3.223322] (ros2_ur_moveit_examples) StderrLine: {'line': b'\x1b[0m\n'}
+[3.223373] (ros2_ur_moveit_examples) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:70 (add_executable):\n'}
+[3.223418] (ros2_ur_moveit_examples) StderrLine: {'line': b'  Cannot find source file:\n'}
+[3.223460] (ros2_ur_moveit_examples) StderrLine: {'line': b'\n'}
+[3.223502] (ros2_ur_moveit_examples) StderrLine: {'line': b'    src/planning_scene.cpp\n'}
+[3.223545] (ros2_ur_moveit_examples) StderrLine: {'line': b'\n'}
+[3.223587] (ros2_ur_moveit_examples) StderrLine: {'line': b'  Tried extensions .c .C .c++ .cc .cpp .cxx .cu .mpp .m .M .mm .ixx .cppm\n'}
+[3.223628] (ros2_ur_moveit_examples) StderrLine: {'line': b'  .ccm .cxxm .c++m .h .hh .h++ .hm .hpp .hxx .in .txx .f .F .for .f77 .f90\n'}
+[3.223668] (ros2_ur_moveit_examples) StderrLine: {'line': b'  .f95 .f03 .hip .ispc\n'}
+[3.223709] (ros2_ur_moveit_examples) StderrLine: {'line': b'\n'}
+[3.223749] (ros2_ur_moveit_examples) StderrLine: {'line': b'\x1b[0m\n'}
+[3.223798] (ros2_ur_moveit_examples) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:74 (add_executable):\n'}
+[3.223842] (ros2_ur_moveit_examples) StderrLine: {'line': b'  Cannot find source file:\n'}
+[3.223883] (ros2_ur_moveit_examples) StderrLine: {'line': b'\n'}
+[3.223923] (ros2_ur_moveit_examples) StderrLine: {'line': b'    src/planning_scene_service.cpp\n'}
+[3.223967] (ros2_ur_moveit_examples) StderrLine: {'line': b'\n'}
+[3.224008] (ros2_ur_moveit_examples) StderrLine: {'line': b'  Tried extensions .c .C .c++ .cc .cpp .cxx .cu .mpp .m .M .mm .ixx .cppm\n'}
+[3.224049] (ros2_ur_moveit_examples) StderrLine: {'line': b'  .ccm .cxxm .c++m .h .hh .h++ .hm .hpp .hxx .in .txx .f .F .for .f77 .f90\n'}
+[3.224089] (ros2_ur_moveit_examples) StderrLine: {'line': b'  .f95 .f03 .hip .ispc\n'}
+[3.224129] (ros2_ur_moveit_examples) StderrLine: {'line': b'\n'}
+[3.224170] (ros2_ur_moveit_examples) StderrLine: {'line': b'\x1b[0m\n'}
+[3.229138] (ros2_ur_moveit_examples) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:58 (add_executable):\n'}
+[3.229303] (ros2_ur_moveit_examples) StderrLine: {'line': b'  No SOURCES given to target: hello_moveit\n'}
+[3.229421] (ros2_ur_moveit_examples) StderrLine: {'line': b'\n'}
+[3.229521] (ros2_ur_moveit_examples) StderrLine: {'line': b'\x1b[0m\n'}
+[3.229615] (ros2_ur_moveit_examples) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:62 (add_executable):\n'}
+[3.229724] (ros2_ur_moveit_examples) StderrLine: {'line': b'  No SOURCES given to target: kinematics\n'}
+[3.229817] (ros2_ur_moveit_examples) StderrLine: {'line': b'\n'}
+[3.229909] (ros2_ur_moveit_examples) StderrLine: {'line': b'\x1b[0m\n'}
+[3.230000] (ros2_ur_moveit_examples) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:66 (add_executable):\n'}
+[3.230098] (ros2_ur_moveit_examples) StderrLine: {'line': b'  No SOURCES given to target: check_collisions\n'}
+[3.230226] (ros2_ur_moveit_examples) StderrLine: {'line': b'\n'}
+[3.230364] (ros2_ur_moveit_examples) StderrLine: {'line': b'\x1b[0m\n'}
+[3.230499] (ros2_ur_moveit_examples) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:70 (add_executable):\n'}
+[3.230594] (ros2_ur_moveit_examples) StderrLine: {'line': b'  No SOURCES given to target: planning_scene\n'}
+[3.230679] (ros2_ur_moveit_examples) StderrLine: {'line': b'\n'}
+[3.230764] (ros2_ur_moveit_examples) StderrLine: {'line': b'\x1b[0m\n'}
+[3.230845] (ros2_ur_moveit_examples) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:74 (add_executable):\n'}
+[3.230925] (ros2_ur_moveit_examples) StderrLine: {'line': b'  No SOURCES given to target: planning_scene_service\n'}
+[3.231006] (ros2_ur_moveit_examples) StderrLine: {'line': b'\n'}
+[3.231089] (ros2_ur_moveit_examples) StderrLine: {'line': b'\x1b[0m\n'}
+[3.231169] (ros2_ur_moveit_examples) StderrLine: {'line': b'\x1b[0mCMake Generate step failed.  Build files cannot be regenerated correctly.\x1b[0m\n'}
+[3.243655] (ros2_ur_moveit_examples) CommandEnded: {'returncode': 1}
+[3.264954] (ros2_ur_moveit_examples) JobEnded: {'identifier': 'ros2_ur_moveit_examples', 'rc': 1}
+[3.275602] (-) EventReactorShutdown: {}
