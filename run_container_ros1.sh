@@ -19,7 +19,7 @@ docker run -it \
     --device=/dev/bus/usb \
     --group-add plugdev \
     --volume="/tmp/.X11-unix:/tmp/.X11-unix" \
-    --volume="/home/$user/miapr/Projekt/MIAPR_DOCKER/ros2:/root/Shared/moveit_ws:rw" \
+    --volume="/home/$user/miapr/Projekt/MIAPR_DOCKER/ros1:/root/Shared/trajopt_ws:rw" \
     --env="DISPLAY=$DISPLAY" \
     --network=host \
     --privileged \
