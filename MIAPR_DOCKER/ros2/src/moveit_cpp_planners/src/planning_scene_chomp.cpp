@@ -12,6 +12,77 @@
 #include <moveit/kinematic_constraints/utils.hpp>
 #include <thread>
 
+#include <cmath>
+#include <fstream>  
+#include <iomanip>
+
+double effector_distance(std::vector<Eigen::Vector3d>& effector_positions){
+  auto distance = 0.0;
+  Eigen::Vector3d prev_pos;
+  bool first = true;
+
+  for (const auto& position : effector_positions)
+  {
+
+    if (first){
+      prev_pos = position;
+      first=false;
+    }
+    else{
+      auto dist=std::sqrt(std::pow((position.x()-prev_pos.x()), 2) + std::pow((position.y()-prev_pos.y()), 2) + std::pow((position.z()-prev_pos.z()), 2));
+      prev_pos=position;
+      distance+=dist;
+    }
+
+  }
+  return distance;
+}
+
+std::vector<Eigen::Vector3d> effector_positions_kartezian(auto& traj, auto& move_group_interface){
+  auto group_name=move_group_interface.getName();
+  auto robot_model=move_group_interface.getRobotModel();
+  moveit::core::RobotState robot_state(robot_model);
+
+  std::vector<Eigen::Vector3d> efector_positions;  
+
+  for (size_t i = 0; i < traj.points.size(); ++i){
+    auto positions = traj.points[i].positions;
+    robot_state.setJointGroupPositions(group_name, positions);
+    robot_state.updateLinkTransforms();
+    auto efector_link = move_group_interface.getEndEffectorLink();
+    const Eigen::Isometry3d& eef_transform = robot_state.getGlobalLinkTransform(efector_link);
+    const Eigen::Vector3d& position = eef_transform.translation();
+    efector_positions.push_back(position);
+  }
+  return efector_positions;
+}
+
+double joint_distance(auto& trajectory){
+  std::vector<double> prev_position;
+  bool first = true;
+  auto distance = 0.0;
+  auto points = trajectory.points;
+  for(auto& point : points){
+
+    auto position=point.positions;
+
+    if(first){
+      prev_position=position;
+      first=false;
+    }
+    else{
+      auto dist=0.0;
+      for (size_t i=0; i<position.size();i++){
+        dist+= std::abs(prev_position[i]-position[i]);
+      }
+      dist/=position.size();
+      prev_position=position;
+      distance+=dist;
+    }
+  }
+  return distance;
+}
+
 int main(int argc, char *argv[])
 {
   // Initialize ROS and create the Node
@@ -64,10 +135,7 @@ int main(int argc, char *argv[])
     RCLCPP_INFO(logger, "%s", str.c_str());
   }
   
-  auto const draw_trajectory_tool_path =
-      [&moveit_visual_tools, jmg = move_group_interface.getRobotModel()->getJointModelGroup("ur_manipulator")](
-          auto const trajectory)
-  { return moveit_visual_tools.publishTrajectoryLine(trajectory, jmg); };
+  
 
   // Set a target Pose
   auto const target_pose = []
@@ -89,15 +157,15 @@ auto const collision_objects = [frame_id = move_group_interface.getPlanningFrame
   std::vector<moveit_msgs::msg::CollisionObject> collision_objects;
   
   // Common box dimensions (smaller than original)
-  const double box_x = 0.1;  // 30 cm
-  const double box_y = 0.1;  // 10 cm
-  const double box_z = 0.1;  // 30 cm
+  const double box_x = 0.4;  
+  const double box_y = 0.1;  
+  const double box_z = 1.1;  
   
   // Common box orientation
   geometry_msgs::msg::Quaternion box_orientation;
   box_orientation.w = 1.0;
 
-  // First box (original position but smaller)
+ 
   {
     moveit_msgs::msg::CollisionObject collision_object;
     collision_object.header.frame_id = frame_id;
@@ -109,8 +177,8 @@ auto const collision_objects = [frame_id = move_group_interface.getPlanningFrame
 
     geometry_msgs::msg::Pose box_pose;
     box_pose.orientation = box_orientation;
-    box_pose.position.x = -0.3;
-    box_pose.position.y = 0.2;
+    box_pose.position.x = 0.2;
+    box_pose.position.y = -0.8;
     box_pose.position.z = 0.5;
 
     collision_object.primitives.push_back(primitive);
@@ -120,7 +188,7 @@ auto const collision_objects = [frame_id = move_group_interface.getPlanningFrame
     collision_objects.push_back(collision_object);
   }
 
-  // Second box (30 cm to the left of the first box)
+
   {
     moveit_msgs::msg::CollisionObject collision_object;
     collision_object.header.frame_id = frame_id;
@@ -128,13 +196,13 @@ auto const collision_objects = [frame_id = move_group_interface.getPlanningFrame
     
     shape_msgs::msg::SolidPrimitive primitive;
     primitive.type = primitive.BOX;
-    primitive.dimensions = {box_x, box_y, box_z};
+    primitive.dimensions = {0.4, 0.4, 0.4};
 
     geometry_msgs::msg::Pose box_pose;
     box_pose.orientation = box_orientation;
-    box_pose.position.x = -0.2;  // 30 cm to the left
-    box_pose.position.y = 0.2 - 0.35;
-    box_pose.position.z = 0.5;
+    box_pose.position.x = -0.3;  
+    box_pose.position.y = -0.7;
+    box_pose.position.z = 0.2;
 
     collision_object.primitives.push_back(primitive);
     collision_object.primitive_poses.push_back(box_pose);
@@ -149,6 +217,17 @@ auto const collision_objects = [frame_id = move_group_interface.getPlanningFrame
 // Add the collision objects to the scene
 moveit::planning_interface::PlanningSceneInterface planning_scene_interface;
 planning_scene_interface.applyCollisionObjects(collision_objects);
+
+
+//otwieranie pliku do zapisu
+std::ofstream file("CHOMP.csv");
+
+// Nagłówki kolumn
+file << "czas_planowania,il_pkt_w_trajektorii,droga_koncowki,droga_jointow,\n";
+
+//ilosc znalezionych sciezek
+int path_succes=0;
+for (size_t idx=0; idx<10 ;idx ++){
 
   // Create a plan to that target pose
   prompt("Press 'next' in the RvizVisualToolsGui window to plan");
@@ -166,17 +245,32 @@ planning_scene_interface.applyCollisionObjects(collision_objects);
   // Execute the plan
   if (success)
   {
-    auto draw_success = draw_trajectory_tool_path(plan.trajectory);
-    if(draw_success) {
-      RCLCPP_ERROR(logger, "Trajectory drawn");
-    } else {
-      RCLCPP_ERROR(logger, "Trajectory not drawn");
-    }
-    moveit_visual_tools.trigger();
-    draw_title("Executing");
-    moveit_visual_tools.trigger();
-    RCLCPP_ERROR(logger, "Executing");
-    move_group_interface.execute(plan);
+   //////////////////////////////////////////////////////
+    path_succes+=1;
+    // czas planowania
+    auto czas_planowania =plan.planning_time;
+    RCLCPP_INFO(logger, "Planowanie trwało: %f s", czas_planowania);
+    // trajektoria robota
+    auto robot_trajectory=plan.trajectory.joint_trajectory;
+
+    // ilość punktów w trajektorii
+    size_t points_count = robot_trajectory.points.size();
+    RCLCPP_INFO(logger, "Liczba punktów w trajektorii: %zu", points_count);
+    
+    // obliczanie pozycji końcówki robota w przestrzeni kartezjanskiej
+    auto efector_positions = effector_positions_kartezian(robot_trajectory, move_group_interface);
+    
+    // obliczanie drogi dla koncowki 
+    auto distance = effector_distance(efector_positions);
+    RCLCPP_INFO(logger,"Długość drogi przebytej przez końcówkę: %.3f m\n", distance);
+
+    //obliczanie drogi dla jointow (srednia z roznicy obrotow)
+    auto distance_joints=joint_distance(robot_trajectory);
+    RCLCPP_INFO(logger,"Długość drogi jointow: %.3f\n rad", distance_joints);
+
+    file << std::fixed << std::setprecision(4) << czas_planowania << "," << points_count << "," << distance << "," << distance_joints<< "\n";
+ 
+    ///////////////////
   }
   else
   {
@@ -184,6 +278,10 @@ planning_scene_interface.applyCollisionObjects(collision_objects);
     moveit_visual_tools.trigger();
     RCLCPP_ERROR(logger, "Planning failed!");
   }
+}
+  RCLCPP_INFO(logger, "Ilość znalezionych sciezek: %d", path_succes);
+  file << "\nLiczba udanych prób: " << path_succes << "\n";
+  file.close();
 
   // Shutdown ROS
   
