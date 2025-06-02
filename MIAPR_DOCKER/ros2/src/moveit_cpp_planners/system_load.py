@@ -16,13 +16,12 @@ class LoadMonitor:
         self.thread = None
 
     def sample_load(self):
-        # Sample every 0.5 seconds
         while self.running:
             cpu = psutil.cpu_percent(interval=None)
             gpus = GPUtil.getGPUs()
             gpu_load = 0.0
             if gpus:
-                gpu_load = sum(gpu.load for gpu in gpus) / len(gpus) * 100  # convert to %
+                gpu_load = sum(gpu.load for gpu in gpus) / len(gpus) * 100
             self.cpu_loads.append(cpu)
             self.gpu_loads.append(gpu_load)
             time.sleep(0.5)
@@ -43,21 +42,39 @@ class LoadMonitor:
             return
         self.running = False
         self.thread.join()
-        # Calculate stats
+
         cpu_mean = sum(self.cpu_loads) / len(self.cpu_loads) if self.cpu_loads else 0
         gpu_mean = sum(self.gpu_loads) / len(self.gpu_loads) if self.gpu_loads else 0
         cpu_median = sorted(self.cpu_loads)[len(self.cpu_loads)//2] if self.cpu_loads else 0
         gpu_median = sorted(self.gpu_loads)[len(self.gpu_loads)//2] if self.gpu_loads else 0
-        stats = {
+
+        new_entry = {
             "cpu_mean": cpu_mean,
             "cpu_median": cpu_median,
             "gpu_mean": gpu_mean,
             "gpu_median": gpu_median,
+            "timestamp": time.time()
         }
-        # Save stats to file or print them
+
+        # Load existing data if file exists
+        if os.path.exists(DATA_FILE):
+            with open(DATA_FILE, "r") as f:
+                try:
+                    data = json.load(f)
+                    if not isinstance(data, list):
+                        data = [data]
+                except json.JSONDecodeError:
+                    data = []
+        else:
+            data = []
+
+        data.append(new_entry)
+
+        # Save back to file
         with open(DATA_FILE, "w") as f:
-            json.dump(stats, f)
-        print(json.dumps(stats))
+            json.dump(data, f, indent=2)
+
+        print(json.dumps(new_entry, indent=2))
 
 monitor = LoadMonitor()
 
@@ -67,7 +84,6 @@ def main():
         sys.exit(1)
     if sys.argv[1] == "start":
         monitor.start()
-        # Keep the process alive until stopped
         while monitor.running:
             time.sleep(1)
     elif sys.argv[1] == "stop":
