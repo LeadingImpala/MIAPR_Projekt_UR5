@@ -36,6 +36,8 @@ class LoadMonitor:
         self.thread = threading.Thread(target=self.sample_load)
         self.thread.start()
 
+        self.start_timer = time.time()
+
     def stop(self):
         if not self.running:
             print("Not running.")
@@ -48,12 +50,17 @@ class LoadMonitor:
         cpu_median = sorted(self.cpu_loads)[len(self.cpu_loads)//2] if self.cpu_loads else 0
         gpu_median = sorted(self.gpu_loads)[len(self.gpu_loads)//2] if self.gpu_loads else 0
 
+        self.end_timer = time.time()
+
+        time_elapsed = self.start_timer - self.end_timer
+
         new_entry = {
             "cpu_mean": cpu_mean,
             "cpu_median": cpu_median,
             "gpu_mean": gpu_mean,
             "gpu_median": gpu_median,
-            "timestamp": time.time()
+            "timestamp": time.time(),
+            "time elapsed": time_elapsed
         }
 
         # Load existing data if file exists

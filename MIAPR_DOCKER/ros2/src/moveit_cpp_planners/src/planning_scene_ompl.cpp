@@ -15,11 +15,26 @@
 #include <cmath>
 #include <fstream>  
 #include <iomanip>
+
+#include <string>
+#include <cstdlib>
+#include <chrono>
+
 /// @brief /////////////////////////////////
 
 /// @param argc 
 /// @param argv 
 /// @return 
+
+void start_measurement(const std::string& filename) {
+    std::string cmd = "python3 src/moveit_cpp_planners/system_load.py start " + filename + " &";
+    system(cmd.c_str());
+}
+
+void stop_measurement(const std::string& filename) {
+    std::string cmd = "python3 src/moveit_cpp_planners/system_load.py stop " + filename;
+    system(cmd.c_str());
+}
 
 double effector_distance(std::vector<Eigen::Vector3d>& effector_positions){
   auto distance = 0.0;
@@ -233,6 +248,11 @@ file << "czas_planowania,il_pkt_w_trajektorii,droga_koncowki,droga_jointow,\n";
 int path_succes=0;
 for (size_t idx=0; idx<10 ;idx ++){
 
+  //Starting load measurement
+  std::string filename = "load_data_" + std::to_string(i) + ".json"; //measurement params file
+  start_measurement(filename);
+  std::this_thread::sleep_for(std::chrono::milliseconds(500)); // allow monitor to start
+
   // Create a plan to that target pose
   prompt("Press 'next' in the RvizVisualToolsGui window to plan");
   draw_title("Planning");
@@ -285,6 +305,10 @@ for (size_t idx=0; idx<10 ;idx ++){
     moveit_visual_tools.trigger();
     RCLCPP_ERROR(logger, "Planning failed!");
   }
+  //Stopping load measurement
+  stop_measurement(filename);
+  std::this_thread::sleep_for(std::chrono::milliseconds(500)); // ensure the file is written
+  
 }
   RCLCPP_INFO(logger, "Ilość znalezionych sciezek: %d", path_succes);
   file << "\nLiczba udanych prób: " << path_succes << "\n";
