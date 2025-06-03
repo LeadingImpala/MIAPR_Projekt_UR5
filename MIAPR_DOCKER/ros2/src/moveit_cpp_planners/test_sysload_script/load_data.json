@@ -1,0 +1,37 @@
+[
+  {
+    "cpu_mean": 9.5875,
+    "cpu_median": 8.6,
+    "gpu_mean": 40.0,
+    "gpu_median": 40.0,
+    "timestamp": 1748972925.0935614
+  },
+  {
+    "cpu_mean": 5.2124999999999995,
+    "cpu_median": 4.9,
+    "gpu_mean": 40.1875,
+    "gpu_median": 40.0,
+    "timestamp": 1748973473.0115616
+  },
+  {
+    "cpu_mean": 4.9312499999999995,
+    "cpu_median": 4.9,
+    "gpu_mean": 40.125,
+    "gpu_median": 40.0,
+    "timestamp": 1748973481.9943955
+  },
+  {
+    "cpu_mean": 4.1,
+    "cpu_median": 4.8,
+    "gpu_mean": 40.3125,
+    "gpu_median": 40.0,
+    "timestamp": 1748973490.9595346
+  },
+  {
+    "cpu_mean": 4.73125,
+    "cpu_median": 4.6,
+    "gpu_mean": 40.4375,
+    "gpu_median": 40.0,
+    "timestamp": 1748973499.924248
+  }
+]
