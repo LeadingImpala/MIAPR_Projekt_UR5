@@ -5,96 +5,123 @@ import sys
 import psutil
 import GPUtil
 import os
+import signal
 
 DATA_FILE = "load_data.json"
+TMP_FILE = "load_tmp.json"
+PID_FILE = "load_monitor.pid"
 
 class LoadMonitor:
     def __init__(self):
         self.cpu_loads = []
         self.gpu_loads = []
         self.running = False
-        self.thread = None
 
     def sample_load(self):
+        self.running = True
         while self.running:
             cpu = psutil.cpu_percent(interval=None)
             gpus = GPUtil.getGPUs()
-            gpu_load = 0.0
-            if gpus:
-                gpu_load = sum(gpu.load for gpu in gpus) / len(gpus) * 100
+            gpu_load = sum(gpu.load for gpu in gpus) / len(gpus) * 100 if gpus else 0
             self.cpu_loads.append(cpu)
             self.gpu_loads.append(gpu_load)
             time.sleep(0.5)
 
-    def start(self):
-        if self.running:
-            print("Already running.")
-            return
-        self.running = True
-        self.cpu_loads = []
-        self.gpu_loads = []
-        self.thread = threading.Thread(target=self.sample_load)
-        self.thread.start()
-
-        self.start_timer = time.time()
-
     def stop(self):
-        if not self.running:
-            print("Not running.")
-            return
         self.running = False
-        self.thread.join()
 
-        cpu_mean = sum(self.cpu_loads) / len(self.cpu_loads) if self.cpu_loads else 0
-        gpu_mean = sum(self.gpu_loads) / len(self.gpu_loads) if self.gpu_loads else 0
-        cpu_median = sorted(self.cpu_loads)[len(self.cpu_loads)//2] if self.cpu_loads else 0
-        gpu_median = sorted(self.gpu_loads)[len(self.gpu_loads)//2] if self.gpu_loads else 0
+    def save_temp(self):
+        with open(TMP_FILE, "w") as f:
+            json.dump({
+                "cpu": self.cpu_loads,
+                "gpu": self.gpu_loads,
+                "timestamp": time.time()
+            }, f)
 
-        self.end_timer = time.time()
+def start_monitor():
+    monitor = LoadMonitor()
+    def handler(signum, frame):
+        monitor.stop()
 
-        time_elapsed = self.start_timer - self.end_timer
+    signal.signal(signal.SIGTERM, handler)
+    signal.signal(signal.SIGINT, handler)
 
-        new_entry = {
-            "cpu_mean": cpu_mean,
-            "cpu_median": cpu_median,
-            "gpu_mean": gpu_mean,
-            "gpu_median": gpu_median,
-            "timestamp": time.time(),
-            "time elapsed": time_elapsed
-        }
+    monitor.sample_load()
+    monitor.save_temp()
+def stop_monitor():
+    if not os.path.exists(PID_FILE):
+        print("No monitoring process found.")
+        return
 
-        # Load existing data if file exists
-        if os.path.exists(DATA_FILE):
+    with open(PID_FILE, "r") as f:
+        pid = int(f.read())
+
+    try:
+        os.kill(pid, signal.SIGTERM)
+        print(f"Stopped monitoring process (PID: {pid})")
+    except ProcessLookupError:
+        print("Monitoring process not found or already terminated.")
+
+    os.remove(PID_FILE)
+
+    if not os.path.exists(TMP_FILE):
+        print("No temporary data found.")
+        return
+
+    with open(TMP_FILE, "r") as f:
+        temp_data = json.load(f)
+
+    os.remove(TMP_FILE)
+
+    cpu_data = temp_data["cpu"]
+    gpu_data = temp_data["gpu"]
+    entry = {
+        "cpu_mean": sum(cpu_data) / len(cpu_data) if cpu_data else 0,
+        "cpu_median": sorted(cpu_data)[len(cpu_data) // 2] if cpu_data else 0,
+        "gpu_mean": sum(gpu_data) / len(gpu_data) if gpu_data else 0,
+        "gpu_median": sorted(gpu_data)[len(gpu_data) // 2] if gpu_data else 0,
+        "timestamp": temp_data["timestamp"]
+    }
+
+    if os.path.exists(DATA_FILE):
+        try:
             with open(DATA_FILE, "r") as f:
-                try:
-                    data = json.load(f)
-                    if not isinstance(data, list):
-                        data = [data]
-                except json.JSONDecodeError:
-                    data = []
-        else:
+                data = json.load(f)
+                if not isinstance(data, list):
+                    data = [data]
+        except json.JSONDecodeError:
             data = []
+    else:
+        data = []
 
-        data.append(new_entry)
+    data.append(entry)
 
-        # Save back to file
-        with open(DATA_FILE, "w") as f:
-            json.dump(data, f, indent=2)
+    with open(DATA_FILE, "w") as f:
+        json.dump(data, f, indent=2)
 
-        print(json.dumps(new_entry, indent=2))
-
-monitor = LoadMonitor()
+    print(json.dumps(entry, indent=2))
 
 def main():
     if len(sys.argv) != 2 or sys.argv[1] not in ["start", "stop"]:
         print("Usage: system_load.py [start|stop]")
         sys.exit(1)
+
     if sys.argv[1] == "start":
-        monitor.start()
-        while monitor.running:
-            time.sleep(1)
+        if os.path.exists(PID_FILE):
+            print("Monitoring already started.")
+            sys.exit(1)
+        pid = os.fork()
+        if pid == 0:
+            start_monitor()
+            sys.exit(0)
+        else:
+            with open(PID_FILE, "w") as f:
+                f.write(str(pid))
+            print(f"Started monitoring in background (PID: {pid})")
+
     elif sys.argv[1] == "stop":
-        monitor.stop()
+        stop_monitor()
 
 if __name__ == "__main__":
     main()
+ 
