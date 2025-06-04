@@ -11,10 +11,41 @@
 
 #include <moveit/kinematic_constraints/utils.hpp>
 #include <thread>
-
+////////////////////////////////////////
 #include <cmath>
 #include <fstream>  
 #include <iomanip>
+
+#include <string>
+#include <cstdlib>
+#include <chrono>
+
+void start_monitor() {
+    std::cout << "Starting system load monitor...\n";
+
+    pid_t pid = fork();
+    if (pid == 0) {
+        // Child process: uruchamiamy skrypt Pythona
+        execlp("python3", "python3", "src/moveit_cpp_planners/system_load.py", "start", (char *)nullptr);
+        perror("Failed to exec Python script");
+        exit(1);
+    } else if (pid > 0) {
+        // Parent process
+        std::this_thread::sleep_for(std::chrono::seconds(2)); // daj Pythonowi czas na wystartowanie
+    } else {
+        std::cerr << "Fork failed!" << std::endl;
+        exit(1);
+    }
+}
+
+void stop_monitor() {
+    std::cout << "Stopping system load monitor...\n";
+    int result = system("python3 src/moveit_cpp_planners/system_load.py stop");
+    if (result != 0) {
+        std::cerr << "Failed to stop monitor\n";
+        exit(1);
+    }
+}
 
 double effector_distance(std::vector<Eigen::Vector3d>& effector_positions){
   auto distance = 0.0;
@@ -90,6 +121,9 @@ int main(int argc, char *argv[])
   auto const node = std::make_shared<rclcpp::Node>(
       "hello_moveit",
       rclcpp::NodeOptions().automatically_declare_parameters_from_overrides(true));
+      
+  node->declare_parameter<std::string>("move_group.planning_pipeline", "chomp");
+  node->set_parameter(rclcpp::Parameter("move_group.planning_pipeline", "chomp"));
 
   // Create a ROS logger
   auto const logger = rclcpp::get_logger("hello_moveit");
@@ -103,9 +137,10 @@ int main(int argc, char *argv[])
   // Create the MoveIt MoveGroup Interface
   using moveit::planning_interface::MoveGroupInterface;
   moveit::planning_interface::MoveGroupInterface::Options options("ur_manipulator");
-  //options.planning_pipeline_id = "chomp";
 
   auto move_group_interface = moveit::planning_interface::MoveGroupInterface(node, options);
+  
+  move_group_interface.setPlanningPipelineId("chomp");
 
 
   RCLCPP_ERROR(logger, "test");
@@ -227,7 +262,7 @@ file << "czas_planowania,il_pkt_w_trajektorii,droga_koncowki,droga_jointow,\n";
 
 //ilosc znalezionych sciezek
 int path_succes=0;
-for (size_t idx=0; idx<10 ;idx ++){
+for (size_t idx=1; idx<11 ;idx ++){
 
   // Create a plan to that target pose
   prompt("Press 'next' in the RvizVisualToolsGui window to plan");
@@ -235,12 +270,22 @@ for (size_t idx=0; idx<10 ;idx ++){
   moveit_visual_tools.trigger();
   RCLCPP_ERROR(logger, "Planning");
 
+  //Starting load measurement
+  start_monitor();
+  std::this_thread::sleep_for(std::chrono::seconds(2));
+
+
   auto const [success, plan] = [&move_group_interface]
   {
     moveit::planning_interface::MoveGroupInterface::Plan msg;
     auto const ok = static_cast<bool>(move_group_interface.plan(msg));
     return std::make_pair(ok, msg);
   }();
+
+  //Stopping load measurement
+  stop_monitor();
+  std::this_thread::sleep_for(std::chrono::seconds(2));
+  
 
   // Execute the plan
   if (success)

@@ -1,9 +1,1 @@
-moveit_cpp:
-  planning_pipelines:
-    - stomp
-  pipeline_id: stomp
-
-  stomp:
-    planning_plugin: stomp_moveit/StompPlanner
-    request_adapters: default_planner_request_adapters/AddTimeParameterization
-    start_state_max_bounds_error: 0.1
+/root/Shared/moveit_ws/src/moveit_cpp_planners/config/stomp_planning.yaml

@@ -18,16 +18,16 @@ def load_yaml(package_name, file_path):
 
 def get_robot_description():
     joint_limit_params = PathJoinSubstitution(
-        [FindPackageShare("ur_description"), "config", "ur3e", "joint_limits.yaml"]
+        [FindPackageShare("ur_description"), "config", "ur5e", "joint_limits.yaml"]
     )
     kinematics_params = PathJoinSubstitution(
-        [FindPackageShare("ur_description"), "config", "ur3e", "default_kinematics.yaml"]
+        [FindPackageShare("ur_description"), "config", "ur5e", "default_kinematics.yaml"]
     )
     physical_params = PathJoinSubstitution(
-        [FindPackageShare("ur_description"), "config", "ur3e", "physical_parameters.yaml"]
+        [FindPackageShare("ur_description"), "config", "ur5e", "physical_parameters.yaml"]
     )
     visual_params = PathJoinSubstitution(
-        [FindPackageShare("ur_description"), "config", "ur3e", "visual_parameters.yaml"]
+        [FindPackageShare("ur_description"), "config", "ur5e", "visual_parameters.yaml"]
     )
     
     robot_description_content = Command(
@@ -63,7 +63,7 @@ def get_robot_description():
             "ur",
             " ",
             "ur_type:=",
-            "ur3e",
+            "ur5e",
             " ",
             "prefix:=",
             '""',

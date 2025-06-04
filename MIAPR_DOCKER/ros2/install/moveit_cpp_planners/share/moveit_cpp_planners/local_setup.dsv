@@ -1,2 +1,1 @@
-source;share/moveit_cpp_planners/environment/ament_prefix_path.sh
-source;share/moveit_cpp_planners/environment/path.sh
+/root/Shared/moveit_ws/build/moveit_cpp_planners/ament_cmake_environment_hooks/local_setup.dsv

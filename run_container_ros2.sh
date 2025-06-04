@@ -13,6 +13,7 @@ fi
 
 # Run the container
 docker run -it \
+    --gpus all \
     --name=ur5_planners_ros2 \
     --shm-size=1g \
     --ulimit memlock=-1 \

@@ -15,16 +15,16 @@ def load_yaml(package_name: str, file_path: str):
 
 def get_robot_description():
     joint_limit_params = PathJoinSubstitution(
-        [FindPackageShare("ur_description"), "config", "ur3e", "joint_limits.yaml"]
+        [FindPackageShare("ur_description"), "config", "ur5", "joint_limits.yaml"]
     )
     kinematics_params = PathJoinSubstitution(
-        [FindPackageShare("ur_description"), "config", "ur3e", "default_kinematics.yaml"]
+        [FindPackageShare("ur_description"), "config", "ur5", "default_kinematics.yaml"]
     )
     physical_params = PathJoinSubstitution(
-        [FindPackageShare("ur_description"), "config", "ur3e", "physical_parameters.yaml"]
+        [FindPackageShare("ur_description"), "config", "ur5", "physical_parameters.yaml"]
     )
     visual_params = PathJoinSubstitution(
-        [FindPackageShare("ur_description"), "config", "ur3e", "visual_parameters.yaml"]
+        [FindPackageShare("ur_description"), "config", "ur5", "visual_parameters.yaml"]
     )
     robot_description_content = Command(
         [
@@ -54,7 +54,7 @@ def get_robot_description():
             " ",
             "name:=ur",
             " ",
-            "ur_type:=ur3e",
+            "ur_type:=ur5",
             " ",
             "prefix:=",
             '""',
@@ -81,7 +81,9 @@ def get_robot_description_semantic():
 
 
 def generate_launch_description():
-    stomp_yaml = load_yaml("moveit_cpp_planners", "config/stomp_planning.yaml")
+    stomp_yaml_full = load_yaml("moveit_cpp_planners", "config/stomp_planning.yaml")
+    stomp_yaml = stomp_yaml_full["moveit_cpp"]  # Only pass the actual nested dictionary
+    
     robot_description = get_robot_description()
     robot_description_semantic = get_robot_description_semantic()
 
