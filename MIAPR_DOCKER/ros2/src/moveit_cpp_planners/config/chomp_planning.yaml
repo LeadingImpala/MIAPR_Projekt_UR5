@@ -1,9 +1,16 @@
 moveit_cpp:
-  planning_pipelines:
-    - chomp
   pipeline_id: chomp
+  default_planner_config: "chomp"
+  planning_pipeline: "chomp"
 
   chomp:
-    planning_plugin: chomp::ChompPlanner
-    request_adapters: default_planner_request_adapters/AddTimeParameterization
+    planning_plugin: "chomp::ChompPlanner"
+    request_adapters: "default_planner_request_adapters/AddTimeParameterization"
     start_state_max_bounds_error: 0.1
+    num_timesteps: 40
+    num_iterations: 200
+    max_rollouts: 40
+    optimization_scale: 0.05
+    control_cost_weight: 0.01
+    smoothness_cost_weight: 0.01
+    obstacle_cost_weight: 0.5

@@ -3,7 +3,7 @@ import threading
 import json
 import sys
 import psutil
-import GPUtil
+import pynvml
 import os
 import signal
 
@@ -16,13 +16,23 @@ class LoadMonitor:
         self.cpu_loads = []
         self.gpu_loads = []
         self.running = False
+    
+    def get_gpu_load(self):
+        device_count = pynvml.nvmlDeviceGetCount()
+        if device_count == 0:
+            return 0.0
+        gpu_loads = []
+        for i in range(device_count):
+            handle = pynvml.nvmlDeviceGetHandleByIndex(i)
+            util = pynvml.nvmlDeviceGetUtilizationRates(handle)
+            gpu_loads.append(util.gpu)
+        return sum(gpu_loads) / len(gpu_loads)
 
     def sample_load(self):
         self.running = True
         while self.running:
             cpu = psutil.cpu_percent(interval=None)
-            gpus = GPUtil.getGPUs()
-            gpu_load = sum(gpu.load for gpu in gpus) / len(gpus) * 100 if gpus else 0
+            gpu_load = self.get_gpu_load()
             self.cpu_loads.append(cpu)
             self.gpu_loads.append(gpu_load)
             time.sleep(0.5)
@@ -40,14 +50,23 @@ class LoadMonitor:
 
 def start_monitor():
     monitor = LoadMonitor()
+    pynvml.nvmlInit()
+
     def handler(signum, frame):
         monitor.stop()
 
     signal.signal(signal.SIGTERM, handler)
     signal.signal(signal.SIGINT, handler)
 
-    monitor.sample_load()
+    # Run sampling in a separate thread
+    t = threading.Thread(target=monitor.sample_load)
+    t.start()
+
+    # Wait for thread to finish
+    t.join()
+
     monitor.save_temp()
+
 def stop_monitor():
     if not os.path.exists(PID_FILE):
         print("No monitoring process found.")

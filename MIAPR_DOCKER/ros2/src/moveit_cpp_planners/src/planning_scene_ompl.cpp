@@ -32,7 +32,7 @@ void start_monitor() {
     pid_t pid = fork();
     if (pid == 0) {
         // Child process: uruchamiamy skrypt Pythona
-        execlp("python3", "python3", "system_load.py", "start", (char *)nullptr);
+        execlp("python3", "python3", "src/moveit_cpp_planners/system_load.py", "start", (char *)nullptr);
         perror("Failed to exec Python script");
         exit(1);
     } else if (pid > 0) {
@@ -46,12 +46,13 @@ void start_monitor() {
 
 void stop_monitor() {
     std::cout << "Stopping system load monitor...\n";
-    int result = system("python3 system_load.py stop");
+    int result = system("python3 src/moveit_cpp_planners/system_load.py stop");
     if (result != 0) {
         std::cerr << "Failed to stop monitor\n";
         exit(1);
     }
 }
+
 double effector_distance(std::vector<Eigen::Vector3d>& effector_positions){
   auto distance = 0.0;
   Eigen::Vector3d prev_pos;
@@ -186,7 +187,6 @@ int main(int argc, char *argv[])
     return msg;
   }();
   move_group_interface.setPoseTarget(target_pose);
-
   // Create two collision objects for the robot to avoid
 auto const collision_objects = [frame_id = move_group_interface.getPlanningFrame()] {
   std::vector<moveit_msgs::msg::CollisionObject> collision_objects;
@@ -262,17 +262,18 @@ file << "czas_planowania,il_pkt_w_trajektorii,droga_koncowki,droga_jointow,\n";
 
 //ilosc znalezionych sciezek
 int path_succes=0;
-for (size_t idx=0; idx<10 ;idx ++){
+for (size_t idx=1; idx<11 ;idx ++){
 
-  //Starting load measurement
-  start_monitor();
-  std::this_thread::sleep_for(std::chrono::seconds(1));
-
+ 
   // Create a plan to that target pose
   prompt("Press 'next' in the RvizVisualToolsGui window to plan");
   draw_title("Planning");
   moveit_visual_tools.trigger();
   RCLCPP_ERROR(logger, "Planning");
+
+  //Starting load measurement
+  start_monitor();
+  std::this_thread::sleep_for(std::chrono::seconds(2));
 
   auto const [success, plan] = [&move_group_interface]
   {
@@ -281,7 +282,10 @@ for (size_t idx=0; idx<10 ;idx ++){
     return std::make_pair(ok, msg);
   }();
 
- 
+  //Stopping load measurement
+  stop_monitor();
+  std::this_thread::sleep_for(std::chrono::seconds(2));
+  
 
   // Execute the plan
   if (success)
@@ -320,9 +324,6 @@ for (size_t idx=0; idx<10 ;idx ++){
     moveit_visual_tools.trigger();
     RCLCPP_ERROR(logger, "Planning failed!");
   }
-  //Stopping load measurement
-  stop_monitor();
-  std::this_thread::sleep_for(std::chrono::seconds(1));
   
 }
   RCLCPP_INFO(logger, "Ilość znalezionych sciezek: %d", path_succes);

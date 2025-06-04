@@ -1,9 +1,17 @@
-moveit_cpp:
+move_group:
+  pipeline_id: ompl
   planning_pipelines:
     - ompl
-  pipeline_id: ompl
+  
 
   ompl:
     planning_plugin: ompl_interface/OMPLPlanner
-    request_adapters: default_planner_request_adapters/AddTimeParameterization
+    request_adapters: "default_planner_request_adapters/AddTimeParameterization"
     start_state_max_bounds_error: 0.1
+    num_timesteps: 40
+    num_iterations: 200
+    max_rollouts: 40
+    optimization_scale: 0.05
+    control_cost_weight: 0.01
+    smoothness_cost_weight: 0.01
+    obstacle_cost_weight: 0.5

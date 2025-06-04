@@ -1,2 +1,0 @@
-Invoking command in '/root/Shared/moveit_ws/build/ros2_ur_moveit_examples': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /root/Shared/moveit_ws -DCMAKE_INSTALL_PREFIX=/root/Shared/moveit_ws/install/ros2_ur_moveit_examples
-Invoked command in '/root/Shared/moveit_ws/build/ros2_ur_moveit_examples' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /root/Shared/moveit_ws -DCMAKE_INSTALL_PREFIX=/root/Shared/moveit_ws/install/ros2_ur_moveit_examples
