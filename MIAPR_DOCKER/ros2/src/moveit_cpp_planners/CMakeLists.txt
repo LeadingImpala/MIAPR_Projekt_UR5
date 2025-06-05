@@ -13,6 +13,8 @@ find_package(moveit_visual_tools REQUIRED)
 find_package(Eigen3 REQUIRED)
 find_package(tf2_geometry_msgs REQUIRED)
 
+set(CMAKE_CXX_STANDARD 20)
+
 # === Source files ===
 set(SOURCES
   src/hello_moveit.cpp

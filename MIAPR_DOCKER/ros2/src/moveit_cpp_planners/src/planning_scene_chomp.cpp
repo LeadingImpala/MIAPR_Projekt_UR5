@@ -185,8 +185,21 @@ int main(int argc, char *argv[])
     msg.position.z = 0.5;
     return msg;
   }();
-  move_group_interface.setPoseTarget(target_pose);
+  moveit::core::RobotStatePtr current_state = move_group_interface.getCurrentState(10.0);
+  const moveit::core::JointModelGroup* joint_model_group = move_group_interface.getCurrentState()->getJointModelGroup("ur_manipulator");
 
+  std::vector<double> joint_group_positions;
+  bool found_ik = current_state->setFromIK(joint_model_group, target_pose, 0.1);
+
+
+  if (found_ik) {
+    current_state->copyJointGroupPositions(joint_model_group, joint_group_positions);
+    move_group_interface.setJointValueTarget(joint_group_positions);
+  } else {
+    RCLCPP_ERROR(logger, "Inverse kinematics failed for the target pose");
+    return 1;
+  }
+/*
   // Create two collision objects for the robot to avoid
 auto const collision_objects = [frame_id = move_group_interface.getPlanningFrame()] {
   std::vector<moveit_msgs::msg::CollisionObject> collision_objects;
@@ -252,7 +265,7 @@ auto const collision_objects = [frame_id = move_group_interface.getPlanningFrame
 // Add the collision objects to the scene
 moveit::planning_interface::PlanningSceneInterface planning_scene_interface;
 planning_scene_interface.applyCollisionObjects(collision_objects);
-
+*/
 
 //otwieranie pliku do zapisu
 std::ofstream file("CHOMP.csv");

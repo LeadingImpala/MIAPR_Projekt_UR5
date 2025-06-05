@@ -84,7 +84,7 @@ def get_robot_description_semantic():
 def generate_launch_description():
     ompl_yaml_full = load_yaml("moveit_cpp_planners", "config/ompl_planning.yaml")
     ompl_yaml = ompl_yaml_full["moveit_cpp"]  # Only pass the actual nested dictionary
-
+    
     robot_description = get_robot_description()
     robot_description_semantic = get_robot_description_semantic()
 
@@ -97,15 +97,12 @@ def generate_launch_description():
         name="planning_scene_ompl",
         output="screen",
         parameters=[
-            {"planning_pipeline": "stomp"},  # ✅ Set primary planner
-            {"planning_plugin": "stomp_interface/StompPlanner"},
-            PathJoinSubstitution([FindPackageShare("moveit_cpp_planners"), "config", "stomp_planning.yaml"]),
             robot_description,
             robot_description_semantic,
             robot_description_kinematics,
             ompl_yaml,
         ],
-
     )
 
     return launch.LaunchDescription([ompl_node])
+

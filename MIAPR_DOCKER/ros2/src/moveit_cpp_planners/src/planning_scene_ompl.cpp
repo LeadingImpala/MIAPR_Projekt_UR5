@@ -188,6 +188,7 @@ int main(int argc, char *argv[])
   }();
   move_group_interface.setPoseTarget(target_pose);
   // Create two collision objects for the robot to avoid
+/*
 auto const collision_objects = [frame_id = move_group_interface.getPlanningFrame()] {
   std::vector<moveit_msgs::msg::CollisionObject> collision_objects;
   
@@ -249,9 +250,11 @@ auto const collision_objects = [frame_id = move_group_interface.getPlanningFrame
   return collision_objects;
 }();
 
+
 // Add the collision objects to the scene
 moveit::planning_interface::PlanningSceneInterface planning_scene_interface;
 planning_scene_interface.applyCollisionObjects(collision_objects);
+*/
 
 //otwieranie pliku do zapisu
 std::ofstream file("OMPL.csv");

@@ -1,0 +1,72 @@
+[
+  {
+    "cpu_mean": 5.511111111111111,
+    "cpu_median": 3.4,
+    "gpu_mean": 0.0,
+    "gpu_median": 0.0,
+    "timestamp": 1749113913.4788618
+  },
+  {
+    "cpu_mean": 2.314285714285714,
+    "cpu_median": 2.1,
+    "gpu_mean": 0.0,
+    "gpu_median": 0.0,
+    "timestamp": 1749113992.817008
+  },
+  {
+    "cpu_mean": 3.3699999999999997,
+    "cpu_median": 3.9,
+    "gpu_mean": 0.0,
+    "gpu_median": 0.0,
+    "timestamp": 1749114003.9951222
+  },
+  {
+    "cpu_mean": 3.31,
+    "cpu_median": 3.5,
+    "gpu_mean": 0.0,
+    "gpu_median": 0.0,
+    "timestamp": 1749114013.4148421
+  },
+  {
+    "cpu_mean": 2.7,
+    "cpu_median": 2.6,
+    "gpu_mean": 0.0,
+    "gpu_median": 0.0,
+    "timestamp": 1749114030.0564923
+  },
+  {
+    "cpu_mean": 3.5200000000000005,
+    "cpu_median": 3.6,
+    "gpu_mean": 0.0,
+    "gpu_median": 0.0,
+    "timestamp": 1749114040.7919421
+  },
+  {
+    "cpu_mean": 3.4200000000000004,
+    "cpu_median": 3.4,
+    "gpu_mean": 0.0,
+    "gpu_median": 0.0,
+    "timestamp": 1749114050.0890746
+  },
+  {
+    "cpu_mean": 2.8285714285714287,
+    "cpu_median": 2.3,
+    "gpu_mean": 0.0,
+    "gpu_median": 0.0,
+    "timestamp": 1749114068.4851506
+  },
+  {
+    "cpu_mean": 3.4899999999999998,
+    "cpu_median": 4.0,
+    "gpu_mean": 0.0,
+    "gpu_median": 0.0,
+    "timestamp": 1749114081.853276
+  },
+  {
+    "cpu_mean": 3.4899999999999998,
+    "cpu_median": 3.9,
+    "gpu_mean": 0.0,
+    "gpu_median": 0.0,
+    "timestamp": 1749114093.2287743
+  }
+]
