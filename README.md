@@ -19,5 +19,6 @@ ros2 launch ur_robot_driver ur_control.launch.py ur_type:=ur5e robot_ip:=127.0.0
 ros2 launch ur_moveit_config ur_moveit.launch.py ur_type:=ur5e launch_rviz:=true use_mock_hardware:=true
 
 ## Uruchamianie planerów ruchu (wybierz jeden z planerów: ompl, stomp, chomp):
-ros2 launch moveit_cpp_planners planning_scene<ompl|stomp|chomp>.py
+ros2 launch moveit_cpp_planners planning_scene<ompl|stomp|chomp>.launch.py
+
 
